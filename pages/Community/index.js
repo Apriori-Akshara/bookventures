@@ -1,5 +1,5 @@
 import React from 'react'
-import Topcomponent from '../../components/homepage/topcomponent'
+import Topcomponent from '../../components/homepage/Topcomponent'
 import Footer from '../../components/homepage/bottomcomponent/footer'
 import styles from '../../styles/homecomponents/community.module.css'
 import Image from 'next/image'

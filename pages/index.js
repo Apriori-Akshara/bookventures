@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
-import Topcomponent from '../components/homepage/topcomponent'
+import Topcomponent from '../components/homepage/Topcomponent'
 import Herosection from '../components/homepage/herosection'
 import Reading from '../components/homepage/middlecomponents/reading'
 import Books from '../components/homepage/middlecomponents/bookssection'

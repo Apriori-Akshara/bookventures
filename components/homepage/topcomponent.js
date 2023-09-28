@@ -4,8 +4,9 @@ import Navbar from './topcomponents/navbar'
 import styles from '../../styles/topcomponents/logo.module.css'
 import {FaBars} from 'react-icons/fa'
 
-const topcomponent = () => {
-  const [click,setClick] = useState(true)
+const Topcomponent = () => {
+
+  const [click,setClick] = useState(true);
 
   const clicked = () => {
     setClick(!click);
@@ -23,4 +24,4 @@ const topcomponent = () => {
   )
 }
 
-export default topcomponent
+export default Topcomponent
