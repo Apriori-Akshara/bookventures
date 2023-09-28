@@ -10,60 +10,74 @@ const index = () => {
     { url : '/booksimages/1 (1).jpeg',
       name : 'Dan Brown',
       genre : 'Thriller',
+      id:1,
                 },
     { url : '/booksimages/1 (2).jpeg',
       name : 'JK Rowling',
       genre : 'Magical Realism',
+      id:2,
                 },
     { url : '/booksimages/1 (3).jpeg',
       name : 'Arundhati Roy',
       genre : 'Historical Fiction',
+      id:3,
                 },
     { url : '/booksimages/1 (4).jpeg',
       name : 'Ahmed Salman Rushdie',
       genre : 'Magical Realism',
+      id:4,
                 },
     { url : '/booksimages/1 (5).jpeg',
       name : 'Nilanjana Sudeshna Jhumpa Lahiri',
       genre : 'Historical Fiction',
+      id:5,
                 },
     { url : '/booksimages/1 (6).jpeg',
       name : 'Jeffrey Archer',
       genre : 'Thriller',
+      id:6,
                 },
     { url : '/booksimages/1 (7).jpeg',
       name : 'Charles Dickens',
       genre : 'Classic',
+      id:7,
                 },
     { url : '/booksimages/1 (8).jpeg',
       name : 'Ernest Hemingway',
       genre : 'Classic',
+      id:8,
                 },    
     { url : '/booksimages/1 (9).jpeg',
       name : 'Jane Austen',
       genre : 'Classic',
+      id:9,
                 },  
 ]
   const arr2 = [
   { url : '/booksimages/2 (1).jpeg',
     name : 'Carl Sagan',
     genre : 'Popular Science',
+    id:1,
               },
   { url : '/booksimages/2 (2).jpeg',
     name : 'Yuval Noah Harari',
     genre : 'Historical Non-Fiction',
+    id:2,
               },
   { url : '/booksimages/2 (3).jpeg',
     name : 'Richard Feynhan',
     genre : 'Popular Science',
+    id:3,
               },
   { url : '/booksimages/2 (4).jpeg',
     name : 'Richard Dawkins',
     genre : 'Popular Science',
+    id:4,
               },
   { url : '/booksimages/2 (5).jpeg',
     name : 'Siddharth Mukherjee',
     genre : 'Genral Non-Fiction',
+    id:5,
               },
 ]
 
@@ -82,7 +96,7 @@ const index = () => {
   
   <div className={styles.bvcontainer}>
   {arr.map(data =>
-      <div className={styles.bvcard}>
+      <div className={styles.bvcard} key={data.id}>
         <div className={styles.bvimgcont}>
           <Image src={data.url} width={400} height={400} alt="Book Image" />
         </div>
@@ -98,7 +112,7 @@ const index = () => {
   
       <div className={styles.bvcontainer}>
       {arr2.map(data =>
-      <div className={styles.bvcard}>
+      <div className={styles.bvcard} key={data.id}>
         <div className={styles.bvimgcont}>
           <Image src={data.url} width={400} height={400} alt="Book Image" />
         </div>
