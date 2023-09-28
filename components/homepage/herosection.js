@@ -21,8 +21,7 @@ const herosection = () => {
         <button>Join Now</button>
       </div>
     </div>
-
   )
 }
 
-export default herosection
+export default herosection;

@@ -92,7 +92,7 @@ const bookssection = () => {
   
   <div className={styles.bvcontainer}>
   {arr.map(data =>
-      <div className={styles.bvcard} key={data.id}>
+      <div key={data.id} className={styles.bvcard}>
         <div className={styles.bvimgcont}>
           <Image src={data.url} width={400} height={400} alt="Book Image" />
         </div>
@@ -108,7 +108,7 @@ const bookssection = () => {
   
       <div className={styles.bvcontainer}>
       {arr2.map(data =>
-      <div className={styles.bvcard} key={data.id}>
+      <div key={data.id} className={styles.bvcard}>
         <div className={styles.bvimgcont}>
           <Image src={data.url} width={400} height={400} alt="Book Image" />
         </div>
