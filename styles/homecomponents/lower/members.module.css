@@ -1,0 +1,80 @@
+.container{
+  background-color: black;
+  padding: 50px 0 0;
+}
+.title{
+  text-align: center;
+  color: #A5AC8C;
+  font-size: 36px;
+  letter-spacing: 3px;
+}
+.hr{
+  width: 7vw;
+}
+.info{
+  padding: 30px 0;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+.img{
+  width: 100vw;
+  height: auto;
+}
+.position{
+  position: relative;
+}
+.profiles{
+  display: flex;
+  position: absolute;
+  top: 30%;
+  padding: 0 10%;
+  gap: 8%;
+}
+.card{
+  padding: 20px 10px;
+  background-color: white;
+  width: 25vw;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profileimg{
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+.review{
+  color: #A5AC8C;
+  margin: 10px 0;
+  width: 80%;
+}
+.fullreview{
+  color: #666666;
+  margin: 10px 0;
+}
+.fullreview:hover{
+  cursor: pointer;
+}
+@media screen and (max-width: 1200px){
+  .profiles{
+    top: 10%;
+    padding: 0 8.5%;
+  }
+  .review{
+    display: none;
+  }
+}
+@media screen and (max-width: 768px){
+  .profiles{
+    flex-direction: column;
+    position:unset;
+    padding: 20px 5%;
+    gap: 10px;
+  }
+  .card{
+    width: 95%;
+  }
+}

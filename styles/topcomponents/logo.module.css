@@ -1,0 +1,49 @@
+.fixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 1000;
+  height: 140px;
+}
+.container{
+  padding: 1rem 8.33333333%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.logo{
+    color: #FFFFFF;
+    font-weight: 700;
+    word-spacing: 1px;
+    font-size:30px;
+}
+.menu{
+  display: none;
+}
+@media screen and (max-width: 1200px){
+  .fixed{
+    height: 120px;
+  }
+  .menu{
+    display: block;
+  }
+  .menu button{
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+  }
+}
+@media screen and (max-width: 768px){
+.fixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 1000;
+  height: 140px;
+}
+}

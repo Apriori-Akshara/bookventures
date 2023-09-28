@@ -1,0 +1,9 @@
+.container{
+  z-index: 1000;
+  background-color: #F8EF12;
+  color: #3D5B59;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 0.25rem!important;
+  padding-bottom: 10px;
+}
