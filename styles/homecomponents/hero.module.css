@@ -114,16 +114,20 @@
     padding: 8px 3vw;
     font-size: 18px;
   }
+  .box2{
+    margin-top: 0px;
+  }
 }
 @media screen and (max-width: 768px){
   .container{
     margin-top: 140px;
   }
   .heroimage{
-    height: 300px;
+    height: 250px;
   }
   .box{
-    height: 75px;
+    padding: 5px 0;
+    height: 65px;
   }
   .box h5 , .box h4{
     display: none;
@@ -136,5 +140,6 @@
   .box button{
     padding: 4px 3vw;
     font-size: 12px;
+    margin-top: 0px;
   }
 }

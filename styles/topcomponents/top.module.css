@@ -7,3 +7,8 @@
   padding-top: 0.25rem!important;
   padding-bottom: 10px;
 }
+@media screen and (max-width: 768px){
+  .container{
+  height: 45px;
+  }
+}
