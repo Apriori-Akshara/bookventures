@@ -52,7 +52,7 @@ const books = ({product}) => {
       <hr className={styles.hr}/>
       <div className={styles.cards}>
         {product.books.data.map(data =>
-          <div className={styles.card}>
+          <div className={styles.card} key={data.id}>
             <Image className={styles.img} loader={() => data.attributes.img.data.attributes.url} src={data.attributes.img.data.attributes.url} width={400} height={400} alt="Book Image" />
             <div className={styles.name}>{data.attributes.name}</div>
           </div>
