@@ -19,6 +19,9 @@
 .hr{
   width: 7vw;
 }
+.link{
+  text-decoration: none;
+}
 .button{
   background: none;
   border: 1px solid black;

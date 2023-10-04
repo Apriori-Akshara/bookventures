@@ -4,18 +4,18 @@
   height: 800px;
 }
 .container{
-  margin-top: 140px;
+  margin-top: 165px;
   position: relative;
 }
 .box{
   padding: 25px 0;
   background-color: #F8EF12;
-  width: 49%;
-  height: 200px;
+  width: 48%;
+  height: 185px;
   text-align: center;
   position: absolute;
-  top: 34%;
-  left: 25.5%;
+  top: 35%;
+  left: 26%;
   border-radius: 10px;
 }
 .box h2{
@@ -50,6 +50,7 @@
   cursor: pointer;
 }
 .box2{
+  display: none;
   margin-top: 50px;
   padding: 25px 0;
   background-color: #ebe300;
@@ -124,6 +125,9 @@
   }
   .heroimage{
     height: 250px;
+  }
+  .box2{
+    display: block;
   }
   .box{
     padding: 5px 0;

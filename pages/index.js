@@ -9,7 +9,21 @@ import Footer from "../components/homepage/bottomcomponent/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export const getStaticProps = async () => {
+  const resulting = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
+    headers: {
+     Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
+   } 
+   });
+  const result = await resulting.json();
+  return {
+    props: {
+      product: result.data,
+    },
+  };
+};
+
+export default function Home({product}) {
   return (
     <>
       <Head>
@@ -22,7 +36,7 @@ export default function Home() {
         <Topcomponent />
         <Herosection />
         <Reading />
-        <Books />
+        <Books data={product}/>
         <Lower />
         <Footer />
       </div>
