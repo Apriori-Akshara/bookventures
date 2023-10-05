@@ -6,6 +6,7 @@ import Reading from "../components/homepage/middlecomponents/reading";
 import Books from "../components/homepage/middlecomponents/bookssection";
 import Lower from "../components/homepage/lowercomponents/lowercomponents";
 import Footer from "../components/homepage/bottomcomponent/footer";
+import Ads from '../components/homepage/ad/ads'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,8 +36,10 @@ export default function Home({product}) {
       <div>
         <Topcomponent />
         <Herosection />
+        <Ads />
         <Reading />
         <Books data={product}/>
+        <Ads />
         <Lower />
         <Footer />
       </div>

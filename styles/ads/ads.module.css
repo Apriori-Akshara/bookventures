@@ -1,0 +1,19 @@
+.container{
+  padding:20px 1.2vw;
+}
+.adimg{
+  width: 100%;
+  height: 200px;
+}
+@media screen and (max-width: 1200px){
+  .adimg{
+    width: 100%;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 768px){
+  .adimg{
+    width: 100%;
+    height: 90px;
+  }
+}

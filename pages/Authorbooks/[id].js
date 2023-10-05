@@ -3,6 +3,7 @@ import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/books/books.module.css'
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors`, {
@@ -42,8 +43,6 @@ export const getStaticProps = async (context) => {
 
 const books = ({product}) => {
 
-  console.log(product)
-
   return (
     <div>
       <Topcomponent />
@@ -53,8 +52,10 @@ const books = ({product}) => {
       <div className={styles.cards}>
         {product.books.data.map(data =>
           <div className={styles.card} key={data.id}>
-            <Image className={styles.img} loader={() => data.attributes.img.data.attributes.url} src={data.attributes.img.data.attributes.url} width={400} height={400} alt="Book Image" />
+          <Link className={styles.link} href={`/Book/${data.id}`}>
+            <Image className={styles.img} unoptimized={true} loader={() => data.attributes.img.data.attributes.url} src={data.attributes.img.data.attributes.url} width={400} height={400} alt="Book Image" />
             <div className={styles.name}>{data.attributes.name}</div>
+          </Link>
           </div>
         )}
       </div>
