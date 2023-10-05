@@ -40,7 +40,7 @@ export const getStaticProps = async (context) => {
   };
 };
 
-const book = ({product}) => {
+const Book = ({product}) => {
 
   console.log(product)
 
@@ -82,4 +82,4 @@ const book = ({product}) => {
   )
 }
 
-export default book
+export default Book
