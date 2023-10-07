@@ -22,8 +22,8 @@ export const getStaticProps = async () => {
 const index = ({data}) => {
 
   
- let fiction = data.filter(data => data.attributes.isfiction === true);
- let nonfiction = data.filter(data => data.attributes.isfiction === false);
+ let fiction = data.filter(data => data.attributes.isfiction === true && data.attributes.iskids === false);
+ let nonfiction = data.filter(data => data.attributes.isfiction === false && data.attributes.iskids === false);
 
   return (
     <div>
@@ -31,7 +31,6 @@ const index = ({data}) => {
       <div className={styles.container}>
         <div className={styles.topcontainer}>
           <div className={styles.topic}>Join a community</div>
-          <hr className={styles.hr} />
         </div>
 
         <div className={styles.bvsection}>

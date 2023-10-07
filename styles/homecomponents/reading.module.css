@@ -1,11 +1,13 @@
 .container{
-  padding: 35px 0;
+  padding: 0 0 35px;
 }
 .title{
   text-align: center;
-  color: #A5AC8C;
+  color: black;
   font-size: 36px;
   letter-spacing: 3px;
+  background-color: rgb(228, 234, 226);
+  padding: 10px 0;
 }
 .container hr{
 width: 7vw;

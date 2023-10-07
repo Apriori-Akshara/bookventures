@@ -47,9 +47,9 @@
   font-size: 36px;
 }
 .title{
-  color: white;
+  color: black;
   padding: 20px 10vw;
-  border-bottom: 1px solid white;
+  background-color: rgb(228, 234, 226);
   font-size: 30px;
 }
 .underline{

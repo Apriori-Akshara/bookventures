@@ -1,0 +1,123 @@
+.container{
+  margin-top: 170px;
+  padding-top: 30px;
+}
+.title{
+  text-align: center;
+  color: #A5AC8C;
+  font-size: 36px;
+  letter-spacing: 3px;
+  padding: 0 10vw;
+}
+.hr{
+  width: 10vw;
+}
+.subcontainer{
+  margin: 30px 5vw;
+  padding: 30px 5vw 60px;
+  background-color: white;
+  border-radius: 20px;
+  background-color: rgb(28, 28, 28);
+  color: white;
+}
+.topic{
+  font-size: 32px;
+  border-bottom: 1px solid white;
+}
+.infos{
+  display: flex;
+  justify-content: space-between;
+}
+.info{
+  border: 1px solid white;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 20px;
+  padding-right: 5vw;
+  width: 17vw;
+}
+.infotitle{
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.mapcontainer{
+  width: 35vw;
+}
+.maptitle{
+  font-size: 28px;
+  border-bottom: 1px solid white;
+  margin-bottom: 30px;
+}
+.frame{
+  width: 35vw;
+  border-radius: 20px;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form input{
+  display: block;
+  height: 30px;
+  width: 90%;
+  padding: 10px 5%;
+  border-radius: 10px;
+}
+.form textarea{
+  height: 200px;
+  width: 90%;
+  padding: 10px 5%;
+  border-radius: 10px;
+}
+.button{
+  color: #A5AC8C;
+  background-color: black;
+  padding: 10px 20px;
+  border: 1px solid black;
+  transition: 0.5s;
+  width: 10vw;
+  border-radius: 10px;
+}
+.button:hover{
+  border: 1px solid #A5AC8C;
+  color: white;
+}
+@media screen and (max-width: 1200px){
+  .container{
+    margin-top: 120px;
+    padding-top: 30px;
+  }
+  .infos{
+    flex-direction: column;
+  }
+  .info{
+    width: 90%;
+  }
+  .flex{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .mapcontainer{
+    width: 100%;
+  }
+  .frame{
+    width: 100%;
+  }
+  .button{
+    width: 15vw;
+  }
+}
+@media screen and (max-width: 768px){
+  .frame{
+    height: 300px;
+  }
+  .button{
+    width: 100%;
+  }
+}

@@ -1,13 +1,15 @@
 .container{
-  padding: 50px 0 20px;
-  background-color: #F8EF12;
+  padding: 0 0 20px;
+  background-color: #fffa75;
 }
 .title{
+  background-color: #fff700;
   text-align: center;
   color: #8d9182;
   font-size: 40px;
   font-weight: 500;
   letter-spacing: 3px;
+  padding: 10px 0;
 }
 .hr{
   width: 7vw;

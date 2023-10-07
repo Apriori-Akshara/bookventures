@@ -9,7 +9,6 @@ const video = () => {
     <div className={styles.container}>
     <div className={styles.top}>
       <div className={styles.title}>Video of our Subscribers</div>
-      <hr className={styles.hr} />
       <p className={styles.text}>Our Subscribers telling the benefits of reading of reading and how the activities <b>Bookventures</b> have helped their intellectual</p>
     </div>
     <div className={styles.videos}>

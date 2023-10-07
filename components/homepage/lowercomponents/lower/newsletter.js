@@ -5,7 +5,6 @@ const newsletter = () => {
   return (
     <div className={styles.container}>
       <div className={styles.title}>Subscribe to our Newsletter</div>
-      <hr className={styles.hr} />
       <div className={styles.input}>
         <input placeholder='Email...'/>
         <button>Subscribe</button>

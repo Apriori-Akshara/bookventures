@@ -6,7 +6,6 @@ const reading = () => {
   return (
     <div className={styles.container}>
       <div className={styles.title}>Why is Reading so Important?</div>
-      <hr/>
       <div className={styles.first}>
         <div>
           <Image className={styles.img} src={'/homepage/reading/1.jpeg'} width={500} height={400} alt="image"/>

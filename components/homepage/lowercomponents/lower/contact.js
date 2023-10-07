@@ -8,7 +8,6 @@ const contact = () => {
       <div className={styles.title}>
         Contact Us
       </div>
-      <hr className={styles.hr} />
       <div className={styles.con}>
         <div className={styles.left}>
           <h4>Better yet, see us in person!</h4>
