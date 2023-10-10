@@ -3,6 +3,7 @@ import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/singlebook/book.module.css'
 import Image from 'next/image';
+import dynamic from "next/dynamic";
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books?pagination[page]=1&pagination[pageSize]=500`, {
@@ -80,4 +81,4 @@ const Book = ({product}) => {
   )
 }
 
-export default Book
+export default dynamic (() => Promise.resolve(Book), {ssr: false})

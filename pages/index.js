@@ -7,6 +7,7 @@ import Books from "../components/homepage/middlecomponents/bookssection";
 import Lower from "../components/homepage/lowercomponents/lowercomponents";
 import Footer from "../components/homepage/bottomcomponent/footer";
 import Ads from '../components/homepage/ad/ads'
+import dynamic from "next/dynamic";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Home({product}) {
+const Home = ({product}) => {
   return (
     <>
       <Head>
@@ -46,3 +47,5 @@ export default function Home({product}) {
     </>
   );
 }
+
+export default dynamic (() => Promise.resolve(Home), {ssr: false})

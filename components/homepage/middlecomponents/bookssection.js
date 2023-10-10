@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../../../styles/homecomponents/books.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import dynamic from "next/dynamic";
 
 const bookssection = ({data}) => {
 
@@ -58,4 +59,4 @@ const bookssection = ({data}) => {
   )
 }
 
-export default bookssection
+export default dynamic (() => Promise.resolve(bookssection), {ssr: false})

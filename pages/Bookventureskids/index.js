@@ -4,6 +4,7 @@ import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/kids/kids.module.css'
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from "next/dynamic";
 
 export const getStaticProps = async () => {
   const resulting = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
@@ -72,4 +73,4 @@ const index = ({data}) => {
   )
 }
 
-export default index
+export default dynamic (() => Promise.resolve(index), {ssr: false})
