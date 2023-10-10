@@ -6,7 +6,7 @@
   color: black;
   font-size: 36px;
   letter-spacing: 3px;
-  background-color: rgb(228, 234, 226);
+  background-color: var(--yellow);
   padding: 10px 0;
 }
 .hr{
@@ -28,8 +28,8 @@
 }
 .input button{
   padding: 15px 4%;
-  background-color: #F8EF12;
-  border: 1px solid #F8EF12;
+  background-color: var(--yellow);
+  border: 1px solid var(--yellow);
   border-radius: 10px;
   font-size: 20px;
   transition: 0.5s;

@@ -8,7 +8,7 @@ const navbar = (props) => {
     <div className={props.click ? `${styles.left} ${styles.container}` : `${styles.right} ${styles.container}`}>
       <ul>
         <Link className={styles.link} href='/'>Home</Link>
-        <Link className={styles.link} href='/Bookventureskids'>Bookventures KIds</Link>
+        <Link className={styles.link} href='/Bookventureskids'>Bookventures Kids</Link>
         <li>Quizzes</li>
         <Link className={styles.link} href='/Community'>Join a Community</Link>
         <li>Book Search</li>

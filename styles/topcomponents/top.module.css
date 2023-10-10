@@ -1,6 +1,6 @@
 .container{
   z-index: 1000;
-  background-color: #F8EF12;
+  background-color: var(--yellow);
   color: #3D5B59;
   font-weight: 400;
   text-align: center;

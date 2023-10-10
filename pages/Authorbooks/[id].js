@@ -4,7 +4,6 @@ import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/books/books.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
-import dynamic from "next/dynamic";
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors`, {
@@ -54,7 +53,7 @@ const books = ({product}) => {
         {product.books.data.map(data =>
           <div className={styles.card} key={data.id}>
           <Link className={styles.link} href={`/Book/${data.id}`}>
-            <Image className={styles.img} unoptimized={true} loader={() => data.attributes.img.data.attributes.url} src={data.attributes.img.data.attributes.url} width={400} height={400} alt="Book Image" />
+            <Image className={styles.img} loader={() => data.attributes.img.data.attributes.url} unoptimized={true} src={data.attributes.img.data.attributes.url} width={400} height={400} alt="Book Image" />
             <div className={styles.name}>{data.attributes.name}</div>
           </Link>
           </div>
@@ -67,4 +66,4 @@ const books = ({product}) => {
   )
 }
 
-export default dynamic (() => Promise.resolve(books), {ssr: false})
+export default books

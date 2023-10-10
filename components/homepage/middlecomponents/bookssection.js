@@ -2,7 +2,6 @@ import React from 'react'
 import styles from '../../../styles/homecomponents/books.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import dynamic from "next/dynamic";
 
 const bookssection = ({data}) => {
 
@@ -44,7 +43,7 @@ const bookssection = ({data}) => {
       <div key={data.id} className={styles.bvcard}>
       <Link className={styles.link} href={`/Authorbooks/${data.id}`} >
         <div className={styles.bvimgcont}>
-        <Image loader={() => data.attributes.img.data.attributes.url} src={data.attributes.img.data.attributes.url} width={400} height={400} unoptimized={true} alt="Book Image" />
+        <Image loader={() => data.attributes.img.data.attributes.url} unoptimized={true} src={data.attributes.img.data.attributes.url} width={400} height={400}  alt="Book Image" />
         </div>
         <div className={styles.bvcardinfo}>
           <h2>{data.attributes.name}</h2>
@@ -59,4 +58,4 @@ const bookssection = ({data}) => {
   )
 }
 
-export default dynamic (() => Promise.resolve(bookssection), {ssr: false})
+export default bookssection

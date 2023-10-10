@@ -9,7 +9,7 @@
 }
 .box{
   padding: 25px 0;
-  background-color: #F8EF12;
+  background-color: var(--yellow);
   width: 48%;
   height: 185px;
   text-align: center;
@@ -53,7 +53,7 @@
   display: none;
   margin-top: 50px;
   padding: 25px 0;
-  background-color: #ebe300;
+  background-color: var(--yellow);
   height: 200px;
   text-align: center;
 }
@@ -93,16 +93,16 @@
     margin-top: 120px;
   }
   .heroimage{
-    height: 600px;
+    height: auto;
   }
   .box{
-    padding: 20px 0;
-    background-color: #F8EF12;
+    padding: 0;
+    background-color: var(--yellow);
     width: 48%;
-    height: 145px;
+    height: 130px;
     text-align: center;
     position: absolute;
-    top: 34%;
+    top: 34.5%;
     left: 25.5%;
   }
   .box h2{
@@ -112,6 +112,7 @@
     font-size: 14px;
   }
   .box button{
+    margin-top: 0;
     padding: 8px 3vw;
     font-size: 18px;
   }

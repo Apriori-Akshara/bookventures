@@ -4,7 +4,6 @@ import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/kids/kids.module.css'
 import Link from 'next/link';
 import Image from 'next/image';
-import dynamic from "next/dynamic";
 
 export const getStaticProps = async () => {
   const resulting = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
@@ -38,7 +37,7 @@ const index = ({data}) => {
               <div className={styles.bvcard} key={data.id}>
               <Link className={styles.link} href={`/Authorbooks/${data.id}`} >
                 <div className={styles.bvimgcont}>
-                <Image loader={() => data.attributes.img.data.attributes.url} src={data.attributes.img.data.attributes.url} width={400} height={400} alt="Book Image" />
+                <Image loader={() => data.attributes.img.data.attributes.url} unoptimized={true} src={data.attributes.img.data.attributes.url} width={400} height={400} alt="Book Image" />
                 </div>
                 <div className={styles.bvcardinfo}>
                   <h2>{data.attributes.name}</h2>
@@ -52,25 +51,25 @@ const index = ({data}) => {
 
           {/* <h1 className={styles.title}>Non-Fiction</h1>
 
-<div className={styles.bvcontainer}>
-  {nonfiction.map((data) => (
-    <div className={styles.bvcard} key={data.id}>
-    <Link className={styles.link} href={`/Authorbooks/${data.id}`} >
-      <div className={styles.bvimgcont}>
-      <Image loader={() => data.attributes.img.data.attributes.url} src={data.attributes.img.data.attributes.url} width={400} height={400} alt="Book Image" />
-      </div>
-      <div className={styles.bvcardinfo}>
-        <h2>{data.attributes.name}</h2>
-        <h4>Genre - {data.attributes.genre}</h4>
-      </div>
-      </Link>
-    </div>
-  ))}
-</div> */}
+          <div className={styles.bvcontainer}>
+            {nonfiction.map((data) => (
+              <div className={styles.bvcard} key={data.id}>
+              <Link className={styles.link} href={`/Authorbooks/${data.id}`} >
+                <div className={styles.bvimgcont}>
+                <Image loader={() => data.attributes.img.data.attributes.url} src={data.attributes.img.data.attributes.url} width={400} height={400} alt="Book Image" />
+                </div>
+                <div className={styles.bvcardinfo}>
+                  <h2>{data.attributes.name}</h2>
+                  <h4>Genre - {data.attributes.genre}</h4>
+                </div>
+                </Link>
+              </div>
+            ))}
+          </div> */}
     </div>
     <Footer />
     </div>
   )
 }
 
-export default dynamic (() => Promise.resolve(index), {ssr: false})
+export default index

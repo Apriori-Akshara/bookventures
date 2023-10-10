@@ -3,7 +3,6 @@ import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/singlebook/book.module.css'
 import Image from 'next/image';
-import dynamic from "next/dynamic";
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books?pagination[page]=1&pagination[pageSize]=500`, {
@@ -57,7 +56,7 @@ const Book = ({product}) => {
         <hr className={styles.hr}/>
         <div className={styles.subcontainer}>
         <div>
-          <Image className={styles.img} loader={() => product.img.data.attributes.url} src={product.img.data.attributes.url} width={400} height={400} unoptimized={true} alt="Book Image" />
+          <Image className={styles.img} loader={() => product.img.data.attributes.url} unoptimized={true} src={product.img.data.attributes.url} width={400} height={400} alt="Book Image" />
         </div>
         <div className={styles.middle}>
           <div className={styles.heading}>Summary</div>
@@ -81,4 +80,4 @@ const Book = ({product}) => {
   )
 }
 
-export default dynamic (() => Promise.resolve(Book), {ssr: false})
+export default Book

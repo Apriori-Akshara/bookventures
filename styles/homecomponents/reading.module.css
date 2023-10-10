@@ -6,7 +6,7 @@
   color: black;
   font-size: 36px;
   letter-spacing: 3px;
-  background-color: rgb(228, 234, 226);
+  background-color: var(--yellow);
   padding: 10px 0;
 }
 .container hr{

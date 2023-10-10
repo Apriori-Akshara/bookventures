@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .container{
-  background-color: rgba(248,249,250,1);
+  background-color: var(--yellow);
   font-family: 'Montserrat', sans-serif;
 }
 .container ul{
@@ -13,12 +13,16 @@
   padding: 15px 1vw;
   list-style: none;
   color: black;
+  font-weight: 700;
+  border-right: 1px solid black;
 }
 .link{
   padding: 15px 1vw;
   list-style: none;
   color: black;
   text-decoration: none;
+  font-weight: 700;
+  border-right: 1px solid black;
 }
 @media screen and (max-width: 1200px){
   .container{
@@ -44,9 +48,11 @@
   }
   .container ul li{
     border-bottom:1px solid rgb(210, 210, 210) ;
+    border-right: none;
   }
   .link{
     border-bottom:1px solid rgb(210, 210, 210) ;
+    border-right: none;
   }
 }
 @media screen and (max-width: 768px){

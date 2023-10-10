@@ -3,7 +3,7 @@
   background-color: #fffa75;
 }
 .title{
-  background-color: #fff700;
+  background-color: var(--yellow);
   text-align: center;
   color: #8d9182;
   font-size: 40px;
