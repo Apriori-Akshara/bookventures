@@ -1,36 +1,19 @@
-import React from 'react'
-import Topcomponent from "../../components/homepage/topcomponent";
-import Footer from "../../components/homepage/bottomcomponent/footer";
-import styles from '../../styles/kids/kids.module.css'
+import styles from '../../../styles/kids/kidshome.module.css'
 import Link from 'next/link';
 import Image from 'next/image';
-import dynamic from "next/dynamic";
 
-export const getStaticProps = async () => {
-  const resulting = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
-    headers: {
-     Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
-   } 
-   });
-  const result = await resulting.json();
-  return {
-    props: {
-      data: result.data,
-    },
-  };
-};
-
-const index = ({data}) => {
+const kidssection = ({data}) => {
 
   let fiction = data.filter(data => data.attributes.isfiction === true && data.attributes.iskids === true);
   let nonfiction = data.filter(data => data.attributes.isfiction === false && data.attributes.iskids === true);
 
   return (
     <div>
-    <Topcomponent />
     <div className={styles.container}>
-      <div className={styles.topic}>Bookventures Kids</div>
-      <h1 className={styles.title}>Fiction</h1>
+      {/* <div className={styles.topic}>Bookventures Kids</div>
+      <h1 className={styles.title}>Fiction</h1> */}
+
+      <h1 className={styles.title}>Bookventures Kids</h1>
 
       <div className={styles.bvcontainer}>
             {fiction.map((data) => (
@@ -68,10 +51,8 @@ const index = ({data}) => {
             ))}
           </div> */}
     </div>
-    <Footer />
     </div>
   )
 }
 
-export default dynamic (() => Promise.resolve(index), {ssr: false})
-
+export default kidssection

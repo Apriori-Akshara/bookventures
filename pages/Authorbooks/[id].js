@@ -4,6 +4,7 @@ import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/books/books.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from "next/dynamic";
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors`, {
@@ -66,4 +67,4 @@ const books = ({product}) => {
   )
 }
 
-export default books
+export default dynamic (() => Promise.resolve(books), {ssr: false})

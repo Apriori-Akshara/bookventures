@@ -5,10 +5,10 @@ import Image from 'next/image'
 const reading = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.title}>Why is Reading so Important?</div>
+      <h1 className={styles.title}>Why is Reading so Important?</h1>
       <div className={styles.first}>
         <div>
-          <Image className={styles.img} src={'/homepage/reading/1.jpeg'} width={500} height={400} alt="image"/>
+          <Image className={styles.img} src={'/homepage/reading/3.jpg'} width={500} height={400} alt="image"/>
         </div>
         <div className={styles.info}>
           <h3>LITERARY CIRCLE</h3>
@@ -20,7 +20,7 @@ const reading = () => {
       </div>
       <div className={styles.sec}>
         <div>
-          <Image className={styles.img} src={'/homepage/reading/1.jpg'} width={500} height={400} alt="image"/>
+          <Image className={styles.img} src={'/homepage/reading/4.jpg'} width={500} height={400} alt="image"/>
         </div>
         <div className={styles.info}>
           <h3>LITERARY CIRCLE</h3>

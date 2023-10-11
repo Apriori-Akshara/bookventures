@@ -11,8 +11,24 @@ import {BsYoutube} from 'react-icons/bs'
 const footer = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.logo}>Bookventures</div>
+      <div className={styles.logo}><b>Subscribe to Our Newsletter</b></div>
       <div className={styles.row}>
+      <div className={`${styles.column} ${styles.columnend}`}>
+          {/* <p><b>Subscribe to Our Newsletter</b></p> */}
+          <p className={styles.text}><b>Join the Bookclubs newsletter for monthly reading recommendations, book club tips, giveaways, and more.</b></p><br/>
+          <div className={styles.input}>
+            <input placeholder='Email Address'/>
+            <button><BsFillArrowRightCircleFill /></button>
+          </div>
+          <div className={styles.social}>
+            <BsFacebook />
+            <BsInstagram />
+            <BsTwitter />
+            <BsPinterest />
+            <BsLinkedin />
+            <BsYoutube />
+          </div>
+        </div>
         <div className={styles.column}>
           <p><b>Company</b></p>
           <p> About Bookclubs</p>
@@ -38,25 +54,8 @@ const footer = () => {
           <p> Charities</p>
           <p> Bookstores</p>
           <p> Libraries</p>
-          <p> Creators</p>
         </div>      
         <div>
-        <div className={`${styles.column} ${styles.columnend}`}>
-          <p><b>Connect</b></p>
-          <p className={styles.text}>Join the Bookclubs newsletter for monthly reading recommendations, book club tips, giveaways, and more.</p>
-          <div className={styles.input}>
-            <input placeholder='Email Address'/>
-            <button><BsFillArrowRightCircleFill /></button>
-          </div>
-          <div className={styles.social}>
-            <BsFacebook />
-            <BsInstagram />
-            <BsTwitter />
-            <BsPinterest />
-            <BsLinkedin />
-            <BsYoutube />
-          </div>
-        </div>
       </div>
       </div>
 

@@ -5,6 +5,16 @@
   background-color: #333;
   z-index: 1000;
   height: 140px;
+  transition: 0.3s;
+}
+.none{
+  position: fixed;
+  top: -500px;
+  width: 100%;
+  background-color: #333;
+  z-index: 1000;
+  height: 140px;
+  transition: 0.3s;
 }
 .container{
   padding: 1rem 8.33333333%;

@@ -4,10 +4,9 @@
 .title{
   text-align: center;
   color: black;
-  font-size: 36px;
-  letter-spacing: 3px;
+  font-size: 30px;
   background-color: var(--yellow);
-  padding: 10px 0;
+  padding: 20px 0;
 }
 .container hr{
 width: 7vw;

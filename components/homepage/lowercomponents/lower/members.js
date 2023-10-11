@@ -5,8 +5,8 @@ import Image from 'next/image'
 const members = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.title}>What our Members have to say about us</div>
-      <hr className={styles.hr} />
+      <h1 className={styles.title}>What our Members have to say about us</h1>
+      {/* <hr className={styles.hr} /> */}
       <div className={styles.info}>Overall rating <b>5/5 averaged</b> <br />
         on rating of 3 people</div>
         <div className={styles.position}>

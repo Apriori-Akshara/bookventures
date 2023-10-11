@@ -5,9 +5,9 @@ import Image from 'next/image'
 const contact = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.title}>
+      <h1 className={styles.title}>
         Contact Us
-      </div>
+      </h1>
       <div className={styles.con}>
         <div className={styles.left}>
           <h4>Better yet, see us in person!</h4>

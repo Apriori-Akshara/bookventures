@@ -1,19 +1,32 @@
 .container{
   padding:20px 1.2vw;
+  text-align: center;
 }
 .adimg{
-  width: 100%;
-  height: auto;
+  width: 80vw;
+  height: 150px;
+}
+.adimg1{
+  width: 70vw;
+  height: 100px;
 }
 @media screen and (max-width: 1200px){
   .adimg{
-    width: 100%;
+    width: 90%;
+    height: auto;
+  }
+  .adimg1{
+    width: 80%;
     height: auto;
   }
 }
 @media screen and (max-width: 768px){
   .adimg{
-    width: 100%;
-    height: auto;
+    width: 95%;
+    height: 60px;
+  }
+  .adimg1{
+    width: 85%;
+    height: 50px;
   }
 }

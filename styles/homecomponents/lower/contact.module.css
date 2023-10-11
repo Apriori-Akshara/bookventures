@@ -1,15 +1,13 @@
 .container{
   padding: 0 0 20px;
-  background-color: #fffa75;
+  background-color: black;
 }
 .title{
   background-color: var(--yellow);
   text-align: center;
-  color: #8d9182;
-  font-size: 40px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  padding: 10px 0;
+  color: black;
+  font-size: 30px;
+  padding: 20px 0;
 }
 .hr{
   width: 7vw;
@@ -26,15 +24,16 @@
   margin-top: 0;
 font-weight: 400;
 font-size: 24px;
+color: white;
 }
 .left p{
 font-weight: 300;
-color: rgb(68, 68, 68);
+color: rgb(185, 185, 185);
 }
 .left button{
   background-color: black;
   color: white;
-  border: 1px solid black;
+  border: 1px solid rgb(62, 62, 62);
   padding: 10px 8%;
   font-size: 18px;
   border-radius: 10px;

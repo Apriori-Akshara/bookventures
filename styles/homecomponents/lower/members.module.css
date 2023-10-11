@@ -1,16 +1,17 @@
 .container{
   background-color: black;
-  padding: 50px 0 0;
+  /* padding: 50px 0 0; */
 }
 .title{
   text-align: center;
-  color: #A5AC8C;
-  font-size: 36px;
-  letter-spacing: 3px;
+  color: black;
+  font-size: 30px;
+  padding: 20px 10vw;
+  background-color: var(--yellow);
 }
-.hr{
+/* .hr{
   width: 7vw;
-}
+} */
 .info{
   padding: 30px 0;
   text-align: center;

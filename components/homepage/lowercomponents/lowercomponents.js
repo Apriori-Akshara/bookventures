@@ -1,5 +1,5 @@
 import React from 'react'
-import Newsletter from './lower/newsletter';
+// import Newsletter from './lower/newsletter';
 import Members from './lower/members'
 import Video from '../lowercomponents/lower/video'
 import Contact from '../lowercomponents/lower/contact'
@@ -7,7 +7,7 @@ import Contact from '../lowercomponents/lower/contact'
 const lowercomponents = () => {
   return (
     <div>
-      <Newsletter />
+      {/* <Newsletter /> */}
       <Members />
       <Video />
       <Contact />
