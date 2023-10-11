@@ -33,7 +33,7 @@ const Topcomponent = () => {
       };
     }  
 
-  }, [lastScrollY,controlNavbar]);
+  }, [lastScrollY]);
 
   const clicked = () => {
     setClick(!click);
