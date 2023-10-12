@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 // import {BsSearch} from 'react-icons/bs'
 import axios from "axios";
+import dynamic from "next/dynamic";
 
 const index = () => {
 
@@ -57,4 +58,4 @@ console.log(starts)
   )
 }
 
-export default index
+export default dynamic (() => Promise.resolve(index), {ssr: false})
