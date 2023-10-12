@@ -71,3 +71,46 @@
 .searchcontainer button:hover{
   cursor: pointer;
 }
+@media screen and (max-width: 1200px){
+  .container{
+    margin-top: 150px;
+  }
+  .cards{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card{
+    width: 30vw;
+    height: 380px;
+  }
+  .img{
+    width: 25vw;
+    height: 300px;
+  }
+  .searchcontainer input{
+    width: 80vw;
+    height: 70px;
+    border-radius: 40px;
+  }
+}
+@media screen and (max-width: 768px){
+  .container{
+    margin-top: 130px;
+    padding-top: 40px;
+  }
+  .cards{
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+  .card{
+    width: 100%;
+    height: auto;
+  }
+  .img{
+    width: 100%;
+    height: auto;
+  }
+  .searchcontainer input{
+    width: 100%;
+    height: 50px;
+  }
+}
