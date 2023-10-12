@@ -3,6 +3,7 @@ import Top from './topcomponents/top'
 import Navbar from './topcomponents/navbar'
 import styles from '../../styles/topcomponents/logo.module.css'
 import {FaBars} from 'react-icons/fa'
+import Image from 'next/image'
 
 const Topcomponent = () => {
 
@@ -43,7 +44,7 @@ const Topcomponent = () => {
     <div className={`${show ? styles.fixed : styles.none}`}>
       <Top />
       <div className={styles.container}> 
-        <div className={styles.logo}>Bookventures</div>
+        <div className={styles.logo}><div><Image className={styles.logoimg} src={'/logowhite.png'} width={200} height={200}/></div><div>Bookventures</div></div>
         <div className={styles.menu}><button onClick={clicked}><FaBars /></button></div>
       </div>
       <Navbar click={click}/>

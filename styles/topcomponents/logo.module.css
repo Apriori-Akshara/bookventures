@@ -17,7 +17,7 @@
   transition: 0.3s;
 }
 .container{
-  padding: 1rem 8.33333333%;
+  padding: 10px 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,9 +28,16 @@
     font-weight: 700;
     word-spacing: 1px;
     font-size:30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 .menu{
   display: none;
+}
+.logoimg{
+  width: auto;
+  height: 55px;
 }
 @media screen and (max-width: 1200px){
   .fixed{

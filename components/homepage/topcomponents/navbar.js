@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styles from '../../../styles/topcomponents/nav.module.css'
 import Link from 'next/link'
 
@@ -11,7 +11,7 @@ const navbar = (props) => {
         <Link className={styles.link} href='/Bookventureskids'>Bookventures Kids</Link>
         <li>Quizzes</li>
         <Link className={styles.link} href='/Community'>Join a Community</Link>
-        <li>Book Search</li>
+        <Link className={styles.link} href='/Booksearch'>Book Search</Link>
         <li>Events</li>
         <Link className={styles.link} href='/ContactUs'>Contact Us</Link>
         <li>About Us</li>

@@ -1,5 +1,5 @@
 .container{
-  margin-top: 170px;
+  margin-top: 180px;
   padding-top: 30px;
 }
 .topic{
@@ -14,7 +14,7 @@
 }
 .title{
   color: black;
-  padding: 20px 10vw;
+  padding: 10px 12vw;
   background-color: var(--yellow);
   font-size: 30px;
 }

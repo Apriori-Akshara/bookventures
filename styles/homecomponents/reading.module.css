@@ -32,28 +32,27 @@ width: 7vw;
   text-align: center;
   width: 40vw;
 }
-.info h3{
+.info h1{
   margin-top: 0;
   font-size: 24px;
-  font-weight: 400;
-  color: #A5AC8C;
+  font-weight: 600;
+  color: white;
 }
 .info p{
   font-size: 18px;
-  opacity: 0.6;
   color: #FFFFFF;
 }
 .info button{
   background: none;
-  border: 1px solid #1F1F23 ;
-  color: #A5AC8C;
+  border: 1px solid #A5AC8C ;
+  color: white;
   font-size: 18px;
   padding: 10px 3vw;
   transition: 0.5s;
   border-radius: 5px;
 }
 .info button:hover{
-  border: 1px solid #A5AC8C;
+  border: 1px solid white;
   cursor:pointer;
 }
 @media screen and (max-width: 1200px){

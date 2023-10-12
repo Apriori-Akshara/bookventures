@@ -6,9 +6,10 @@
 }
 .title{
   text-align: center;
-  color: #A5AC8C;
-  font-size: 36px;
-  letter-spacing: 3px;
+  color: white;
+  font-weight: 700;
+  word-spacing: 1px;
+  font-size: 30px;
 }
 .hr{
   width: 7vw;
@@ -19,7 +20,7 @@
 .cards{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 30px 5vw;
+  padding: 80px 5vw;
 }
 .card{
   text-align: center;
