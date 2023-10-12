@@ -8,7 +8,7 @@ import Image from 'next/image';
 import axios from "axios";
 import dynamic from "next/dynamic";
 
-const index = () => {
+const Index = () => {
 
   const[product,setProduct] = useState([]);
   const[starts,setStarts] =useState('')
@@ -58,4 +58,4 @@ console.log(starts)
   )
 }
 
-export default dynamic (() => Promise.resolve(index), {ssr: false})
+export default dynamic (() => Promise.resolve(Index), {ssr: false})
