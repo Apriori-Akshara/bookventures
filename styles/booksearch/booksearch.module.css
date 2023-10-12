@@ -52,8 +52,7 @@
 .searchcontainer input{
   height: 50px;
   width: 40vw;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-radius: 30px;
   padding-left: 2vw;
 }
 .searchcontainer button{
