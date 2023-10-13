@@ -51,11 +51,11 @@
 .slick-next:before
 {
     padding: 5px;
-    border: 1px solid rgb(186, 116, 116);
+    border: 1px solid white;
     font-family: 'slick';
     font-size: 40px;
     line-height: 1;
-    color: rgb(186, 116, 116);
+    color: white;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -177,7 +177,7 @@
     text-align: center;
 
     opacity: .25;
-    color: rgb(154, 154, 154);
+    color: white;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -185,7 +185,7 @@
 .slick-dots li.slick-active button:before
 {
     opacity: 1;
-    color: rgb(190, 108, 108);
+    color: white;
 }
 @media screen and (max-width: 1200px){
 .slick-prev:before,
@@ -195,4 +195,7 @@
     font-size: 30px;
 }
 
+}
+@media screen and (max-width: 1200px){
+    
 }

@@ -8,7 +8,7 @@ const slider = () => {
     dots: true,
     infinite: true,
     speed: 200,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
@@ -40,28 +40,54 @@ const slider = () => {
   };
 
   return (
-    <div>
+    <>
      <Slider {...settings} className={styles.slider}> 
+     
       <div className={styles.card}>
+      <div className={styles.slide}>
+      <div className={styles.imgcontainer}>
         <Image className={styles.profileimg} src={'/homepage/low/profile (1).jpeg'} width={300} height={300} alt='image'/>
+      </div>
+        
         <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
         <div className={styles.name}>Sushma Yadav</div>
       </div>
+
+      </div>
       <div className={styles.card}>
+      <div className={styles.slide}>
+      <div className={styles.imgcontainer}>
         <Image className={styles.profileimg} src={'/homepage/low/profile (2).jpeg'} width={300} height={300} alt='image'/>
+      </div>
         <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
         <div className={styles.name}>Jaspreet Singh</div>
+        </div>
       </div>
       <div className={styles.card}>
+      <div className={styles.slide}>
+      <div className={styles.imgcontainer}>
         <Image className={styles.profileimg} src={'/homepage/low/profile (3).jpeg'} width={300} height={300} alt='image'/>
+      </div>
         <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
         <div className={styles.name}>Shrishti Sharma</div>
+        </div>
       </div>
+      <div className={styles.card}>
+      <div className={styles.slide}>
+      <div className={styles.imgcontainer}>
+        <Image className={styles.profileimg} src={'/homepage/low/profile (3).jpeg'} width={300} height={300} alt='image'/>
+      </div>
+        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
+        {/* <div className={styles.fullreview}>Read full review...</div> */}
+        <div className={styles.name}>Shrishti Sharma</div>
+        </div>
+      </div>
+      
      </Slider>
-    </div>
+    </>
   )
 }
 

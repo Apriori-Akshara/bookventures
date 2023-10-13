@@ -44,7 +44,9 @@ const Topcomponent = () => {
     <div className={`${show ? styles.fixed : styles.none}`}>
       <Top />
       <div className={styles.container}> 
-        <div className={styles.logo}><div><Image className={styles.logoimg} src={'/logowhite.png'} width={200} height={200}/></div><div className={styles.text}>Bookventures</div></div>
+        <div className={styles.logo}><div><Image className={styles.logoimg} src={'/bvlogo.png'} width={200} height={200}/></div>
+        {/* <div className={styles.text}>Bookventures</div> */}
+        </div>
         <div className={styles.menu}><button onClick={clicked}><FaBars /></button></div>
       </div>
       <Navbar click={click}/>
