@@ -74,3 +74,40 @@ cursor: pointer;
 .bvsection{
   background-color: rgb(0, 0, 0);
 }
+@media screen and (max-width: 1200px){
+  .bvcontainer{
+    grid-template-columns: 1fr 1fr;
+  }
+  .bvcard{
+    width: 100%;
+  }
+  .bvcontainer{
+    padding: 50px 5vw;
+  }
+}
+@media screen and (max-width: 768px){
+  .bvcontainer{
+    grid-template-columns: 1fr;
+  }
+
+  .box-container{
+    height: 125vh;
+  }
+
+  .box{
+    width: 60vw;
+  }
+
+  .show{
+    display: none;
+  }
+  .hide{
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid black;
+    position: absolute;
+    right: 20px;
+    display: block;
+  }
+}

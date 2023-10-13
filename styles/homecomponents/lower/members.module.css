@@ -28,7 +28,7 @@
 .profiles{
   display: flex;
   position: absolute;
-  top: 30%;
+  top: 20%;
   padding: 0 10%;
   gap: 8%;
 }
@@ -43,8 +43,8 @@
 }
 .profileimg{
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
 }
 .review{

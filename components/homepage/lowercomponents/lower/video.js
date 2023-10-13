@@ -8,7 +8,7 @@ const video = () => {
   return (
     <div className={styles.container}>
     <div className={styles.top}>
-      <h1 className={styles.title}>Video of our Subscribers</h1>
+      <h1 className={styles.title}>Videos of our Members</h1>
       <p className={styles.text}>Our Subscribers telling the benefits of reading of reading and how the activities <b>Bookventures</b> have helped their intellectual</p>
     </div>
     <div className={styles.videos}>
