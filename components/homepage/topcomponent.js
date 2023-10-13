@@ -45,7 +45,7 @@ const Topcomponent = () => {
       <Top />
       <div className={styles.container}> 
         <div className={styles.logo}><div><Image className={styles.logoimg} src={'/bvlogo.png'} width={200} height={200}/></div>
-        {/* <div className={styles.text}>Bookventures</div> */}
+        <div className={styles.text}>Readers Become Leaders</div>
         </div>
         <div className={styles.menu}><button onClick={clicked}><FaBars /></button></div>
       </div>

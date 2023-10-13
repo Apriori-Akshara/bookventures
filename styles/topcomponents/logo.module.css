@@ -25,8 +25,6 @@
 }
 .logo{
     color: #FFFFFF;
-    font-weight: 700;
-    word-spacing: 1px;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -37,6 +35,11 @@
 .logoimg{
   width: auto;
   height: 55px;
+}
+.text{
+  font-size: 22px;
+  word-spacing: 1px;
+  font-weight: 400;
 }
 @media screen and (max-width: 1200px){
   .fixed{
@@ -51,6 +54,9 @@
     border-radius: 5px;
     color: white;
     border: 2px solid white;
+  }
+  .text{
+    display: none;
   }
 }
 @media screen and (max-width: 768px){
