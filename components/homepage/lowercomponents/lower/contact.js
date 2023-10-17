@@ -11,7 +11,7 @@ const contact = () => {
       </h1>
       <div className={styles.con}>
         <div className={styles.left}>
-          <h4>Message Us on WhatsApp</h4>
+          <h4>Message us on WhatsApp</h4>
           {/* <p>We love our book club members, so feel free to visit during normal business hours.</p> */}
           <button>WhatsApp<BsWhatsapp /></button>
           <h4>Bookventures</h4>
