@@ -6,7 +6,7 @@ const herosection = () => {
   return (
     <div>
       <div className={styles.container}>
-        <Image className={styles.heroimage} src={'/homepage/heroimage/heroimage.jpg'} width={3000} height={2400} alt="image"/>
+        <Image className={styles.heroimage} src={'/homepage/heroimage/h1.jpg'} width={3000} height={2400} alt="image"/>
         <div className={styles.box}>
           <h2>India's Largest Virtual Book Club!</h2>
           <h5>Readers Become Leaders</h5>

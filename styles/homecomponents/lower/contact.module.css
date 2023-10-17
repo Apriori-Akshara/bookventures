@@ -20,6 +20,9 @@
 .img{
   width: 40vw;
 }
+.left{
+  width: 40vw;
+}
 .left h4{
   margin-top: 0;
 font-weight: 400;
@@ -39,6 +42,9 @@ color: rgb(185, 185, 185);
   border-radius: 10px;
   margin-bottom: 30px;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .left button:hover{
   border: 1px solid white;

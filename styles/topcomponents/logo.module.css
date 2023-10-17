@@ -42,6 +42,10 @@
   font-weight: 400;
 }
 @media screen and (max-width: 1200px){
+  .container{
+    padding: 10px 5% 15px;
+    background-color:#1F1F23 !important;
+  }
   .fixed{
     height: 120px;
   }

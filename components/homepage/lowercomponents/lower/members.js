@@ -8,8 +8,8 @@ const members = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>What our Members have to say about us</h1>
       {/* <hr className={styles.hr} /> */}
-      <div className={styles.info}>Overall rating <b>5/5 averaged</b> <br />
-        on rating of 3 people</div>
+      {/* <div className={styles.info}>Overall rating <b>5/5 averaged</b> <br />
+        on rating of 3 people</div> */}
         <div className={styles.position}>
           <Image className={styles.img} src={'/homepage/low/books.jpg'} width={1000} height={800} alt='image'/>
           <div className={styles.profiles}>
