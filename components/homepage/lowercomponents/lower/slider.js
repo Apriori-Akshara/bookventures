@@ -88,7 +88,7 @@ const slider = () => {
       <div className={styles.card}>
       <div className={styles.slide}>
       <div className={styles.imgcontainer}>
-        <Image className={styles.profileimg} src={'/homepage/low/members-kids (5).jpeg'} width={300} height={300} alt='image'/>
+        <Image className={styles.profileimg} src={'/homepage/low/members-kids (7).jpeg'} width={300} height={300} alt='image'/>
       </div>
         <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
@@ -108,7 +108,7 @@ const slider = () => {
       <div className={styles.card}>
       <div className={styles.slide}>
       <div className={styles.imgcontainer}>
-        <Image className={styles.profileimg} src={'/homepage/low/members-kids (7).jpeg'} width={300} height={300} alt='image'/>
+        <Image className={styles.profileimg} src={'/homepage/low/members-kids (5).jpeg'} width={300} height={300} alt='image'/>
       </div>
         <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
