@@ -132,6 +132,7 @@
   .box{
     padding: 5px 0;
     height: 65px;
+    width: 49%;
   }
   .box h5 , .box h4{
     display: none;

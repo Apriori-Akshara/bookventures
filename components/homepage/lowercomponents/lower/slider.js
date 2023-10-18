@@ -49,7 +49,7 @@ const slider = () => {
         <Image className={styles.profileimg} src={'/homepage/low/members-kids (7).jpeg'} width={300} height={300} alt='image'/>
       </div>
         
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
+        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. "</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
         <div className={styles.name}>Swastik Pawar</div>
       </div>
@@ -60,7 +60,7 @@ const slider = () => {
       <div className={styles.imgcontainer}>
         <Image className={styles.profileimg} src={'/homepage/low/members-kids (2).jpeg'} width={300} height={300} alt='image'/>
       </div>
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
+        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. "</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
         <div className={styles.name}>Sara Desraj</div>
         </div>
@@ -70,7 +70,7 @@ const slider = () => {
       <div className={styles.imgcontainer}>
         <Image className={styles.profileimg} src={'/homepage/low/members-kids (3).jpeg'} width={300} height={300} alt='image'/>
       </div>
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
+        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. "</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
         <div className={styles.name}>Arhan Shah</div>
         </div>
@@ -80,7 +80,7 @@ const slider = () => {
       <div className={styles.imgcontainer}>
         <Image className={styles.profileimg} src={'/homepage/low/members-kids (4).jpeg'} width={300} height={300} alt='image'/>
       </div>
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
+        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. "</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
         <div className={styles.name}>Ishanvi</div>
         </div>
@@ -90,7 +90,7 @@ const slider = () => {
       <div className={styles.imgcontainer}>
         <Image className={styles.profileimg} src={'/homepage/low/members-kids (1).jpeg'} width={300} height={300} alt='image'/>
       </div>
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
+        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. "</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
         <div className={styles.name}>Mishika Pawar</div>
         </div>
@@ -100,7 +100,7 @@ const slider = () => {
       <div className={styles.imgcontainer}>
         <Image className={styles.profileimg} src={'/homepage/low/members-kids (6).jpeg'} width={300} height={300} alt='image'/>
       </div>
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
+        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. "</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
         <div className={styles.name}>Naitik Chawla</div>
         </div>
@@ -110,7 +110,7 @@ const slider = () => {
       <div className={styles.imgcontainer}>
         <Image className={styles.profileimg} src={'/homepage/low/members-kids (5).jpeg'} width={300} height={300} alt='image'/>
       </div>
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
+        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. "</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
         <div className={styles.name}>Ridhika Sharma</div>
         </div>
