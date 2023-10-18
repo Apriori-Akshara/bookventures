@@ -51,7 +51,7 @@ const slider = () => {
         
         <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
-        <div className={styles.name}>Swastik</div>
+        <div className={styles.name}>Swastik Pawar</div>
       </div>
 
       </div>
@@ -62,7 +62,7 @@ const slider = () => {
       </div>
         <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
-        <div className={styles.name}>Sara</div>
+        <div className={styles.name}>Sara Desraj</div>
         </div>
       </div>
       <div className={styles.card}>
@@ -72,7 +72,7 @@ const slider = () => {
       </div>
         <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
-        <div className={styles.name}>Ahaan</div>
+        <div className={styles.name}>Arhan Shah</div>
         </div>
       </div>
       <div className={styles.card}>
@@ -82,7 +82,7 @@ const slider = () => {
       </div>
         <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
-        <div className={styles.name}>Shrishti Sharma</div>
+        <div className={styles.name}>Ishanvi</div>
         </div>
       </div>
       <div className={styles.card}>
@@ -92,7 +92,7 @@ const slider = () => {
       </div>
         <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
-        <div className={styles.name}>Shrishti Sharma</div>
+        <div className={styles.name}>Mishika Pawar</div>
         </div>
       </div>
       <div className={styles.card}>
@@ -102,7 +102,7 @@ const slider = () => {
       </div>
         <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
-        <div className={styles.name}>Naitik</div>
+        <div className={styles.name}>Naitik Chawla</div>
         </div>
       </div>
       <div className={styles.card}>
@@ -112,7 +112,7 @@ const slider = () => {
       </div>
         <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. i..."</div>
         {/* <div className={styles.fullreview}>Read full review...</div> */}
-        <div className={styles.name}>Mishika</div>
+        <div className={styles.name}>Ridhika Sharma</div>
         </div>
       </div>
       
