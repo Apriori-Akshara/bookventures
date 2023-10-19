@@ -18,6 +18,10 @@
   color: white;
   font-size: 30px;
 }
+.imgcont{
+  height: 500px;
+  overflow: hidden;
+}
 .imgcontainer{
   width: 100%;
   display: flex;
@@ -48,12 +52,12 @@
 }
 .profiles{
   position: absolute;
-  top: 20%;
+  top: 11%;
 }
 .profileimg{
   border-radius: 50%;
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
 }
 .review{
@@ -83,7 +87,7 @@
 }
 @media screen and (max-width: 768px){
   .container{
-    height: 900px;
+    height: 780px;
   }
   .profiles{
     flex-direction: column;

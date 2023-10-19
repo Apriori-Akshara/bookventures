@@ -11,7 +11,9 @@ const members = () => {
       {/* <div className={styles.info}>Overall rating <b>5/5 averaged</b> <br />
         on rating of 3 people</div> */}
         <div className={styles.position}>
+        <div className={styles.imgcont}>
           <Image className={styles.img} src={'/homepage/low/books.jpg'} width={1000} height={800} alt='image'/>
+        </div>
           <div className={styles.profiles}>
             <Slider />
           </div>

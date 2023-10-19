@@ -16,7 +16,7 @@ const kidssection = ({data}) => {
       <h1 className={styles.title}>Bookventures Kids</h1>
 
       <div className={styles.bvcontainer}>
-            {fiction.map((data) => (
+            {fiction.reverse().slice(0,6).map((data) => (
               
               <div className={styles.bvcard} key={data.id}>
               <Link className={styles.link} href={`/Authorbooks/${data.id}`} >

@@ -21,7 +21,7 @@ const bookssection = ({data}) => {
     <h1 className={styles.title}>Fiction</h1>
   
   <div className={styles.bvcontainer}>
-  {fiction.map(data =>
+  {fiction.reverse().slice(0,6).map(data =>
       <div key={data.id} className={styles.bvcard}>
       <Link className={styles.link} href={`/Authorbooks/${data.id}`} >
         <div className={styles.bvimgcont}>
@@ -39,7 +39,7 @@ const bookssection = ({data}) => {
       <h1 className={styles.title}>Non-Fiction</h1>
   
       <div className={styles.bvcontainer}>
-      {nonfiction.map(data =>
+      {nonfiction.reverse().slice(0,6).map(data =>
       <div key={data.id} className={styles.bvcard}>
       <Link className={styles.link} href={`/Authorbooks/${data.id}`} >
         <div className={styles.bvimgcont}>

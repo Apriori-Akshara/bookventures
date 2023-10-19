@@ -5,6 +5,7 @@ import styles from "../../styles/homecomponents/community.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import {BiSolidLeftArrowSquare} from 'react-icons/bi'
 
 export const getStaticProps = async () => {
   const resulting = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
@@ -38,7 +39,7 @@ const index = ({data}) => {
           <h1 className={styles.title}>Fiction</h1>
 
           <div className={styles.bvcontainer}>
-            {fiction.map((data) => (
+            {fiction.reverse().slice(0,6).map((data) => (
               
               <div className={styles.bvcard} key={data.id}>
               <Link className={styles.link} href={`/Authorbooks/${data.id}`} >
@@ -54,11 +55,15 @@ const index = ({data}) => {
               
             ))}
           </div>
+          {/* <div>
+            <button><BiSolidLeftArrowSquare /></button>
+          </div> */}
+          
 
           <h1 className={styles.title}>Non-Fiction</h1>
 
           <div className={styles.bvcontainer}>
-            {nonfiction.map((data) => (
+            {nonfiction.reverse().slice(0,6).map((data) => (
               <div className={styles.bvcard} key={data.id}>
               <Link className={styles.link} href={`/Authorbooks/${data.id}`} >
                 <div className={styles.bvimgcont}>
