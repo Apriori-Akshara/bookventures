@@ -107,4 +107,8 @@
     width: 90%;
     margin-left: 5px;
   }
+  .imgcont{
+    height: 180px;
+    overflow:visible;
+  }
 }
