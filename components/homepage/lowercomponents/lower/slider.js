@@ -39,21 +39,21 @@ const slider = () => {
   };
 
   let arr = [
-    {src:'/homepage/low/members-kids (3).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Arhan"},
-    {src:'/homepage/low/members-kids (4).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Ishanvi"},
-    {src:'/homepage/low/members-kids (7).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Swastik"},
-    {src:'/homepage/low/members-adults (1).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Aparna"},
-    {src:'/homepage/low/members-adults (2).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Nandini"},
-    {src:'/homepage/low/members-kids (2).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Sara"},
-    {src:'/homepage/low/members-kids (1).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Mishika"},
-    {src:'/homepage/low/members-adults (3).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Vishaka"},
+    {id:1,src:'/homepage/low/members-kids (3).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Arhan"},
+    {id:2,src:'/homepage/low/members-kids (4).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Ishanvi"},
+    {id:3,src:'/homepage/low/members-kids (7).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Swastik"},
+    {id:4,src:'/homepage/low/members-adults (1).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Aparna"},
+    {id:5,src:'/homepage/low/members-adults (2).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Nandini"},
+    {id:6,src:'/homepage/low/members-kids (2).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Sara"},
+    {id:7,src:'/homepage/low/members-kids (1).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Mishika"},
+    {id:8,src:'/homepage/low/members-adults (3).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Vishaka"},
   ]
 
   return (
     <>
      <Slider {...settings} className={styles.slider}> 
      
-      {arr.map(data => <div className={styles.card}>
+      {arr.map(data => <div key={data.id} className={styles.card}>
       <div className={styles.slide}>
       <div className={styles.imgcontainer}>
         <Image className={styles.profileimg} src={data.src} width={300} height={300} alt='image'/>
