@@ -1,60 +1,30 @@
 import React from 'react'
 import styles from '../../../styles/homecomponents/books.module.css'
-import Image from 'next/image'
-import Link from 'next/link'
+import Slider from './bookslider/slider'
 
-const bookssection = ({data}) => {
+const bookssection = ({data,data2}) => {
 
- let fiction = data.filter(data => data.attributes.isfiction === true && data.attributes.iskids === false);
- let nonfiction = data.filter(data => data.attributes.isfiction === false && data.attributes.iskids === false);
+  console.log(data2)
+
+ let fictionindian = data.filter(data => data.attributes.isfiction === true && data.attributes.iskids === false && data.attributes.isIndian === true);
+ let fictionnonindian = data.filter(data => data.attributes.isfiction === true && data.attributes.iskids === false && data.attributes.isIndian === false);
+ let nonfictionnonindian = data.filter(data => data.attributes.isfiction === false && data.attributes.iskids === false);
 
   return (
     <div className={styles.container}>
-    {/* <div className={styles.topcontainer}>
-      <div className={styles.topic}>Join a community</div>
-      <hr className={styles.hr}/>
-      <button className={styles.button}>Check what we do at our bookclubs!</button>
-    </div> */}
-
       <div className={styles.bvsection}>
-
-    <h1 className={styles.title}>Fiction</h1>
-  
-  <div className={styles.bvcontainer}>
-  {fiction.reverse().slice(0,6).map(data =>
-      <div key={data.id} className={styles.bvcard}>
-      <Link className={styles.link} href={`/Authorbooks/${data.id}`} >
-        <div className={styles.bvimgcont}>
-          <Image loader={() => data.attributes.img.data.attributes.url} src={data.attributes.img.data.attributes.url} width={400} height={400} unoptimized={true} alt="Book Image" />
+        <h1 className={styles.title}>Fiction</h1>
+        <div className={styles.bcontainer}>
+          <Slider fiction={data2}/>
+          <Slider fiction={fictionindian}/>
+          <Slider fiction={fictionnonindian}/>  
         </div>
-        <div className={styles.bvcardinfo}>
-          <h2>{data.attributes.name}</h2>
-          <h4>Genre - {data.attributes.genre}</h4>
+        <h1 className={styles.title}>Non-Fiction</h1>
+        <div className={styles.bcontainer}>
+          <Slider fiction={nonfictionnonindian}/>
         </div>
-        </Link>
-      </div>)}
-      </div>
-
-  
-      <h1 className={styles.title}>Non-Fiction</h1>
-  
-      <div className={styles.bvcontainer}>
-      {nonfiction.reverse().slice(0,6).map(data =>
-      <div key={data.id} className={styles.bvcard}>
-      <Link className={styles.link} href={`/Authorbooks/${data.id}`} >
-        <div className={styles.bvimgcont}>
-        <Image loader={() => data.attributes.img.data.attributes.url} unoptimized={true} src={data.attributes.img.data.attributes.url} width={400} height={400}  alt="Book Image" />
-        </div>
-        <div className={styles.bvcardinfo}>
-          <h2>{data.attributes.name}</h2>
-          <h4>Genre - {data.attributes.genre}</h4>
-        </div>
-        </Link>
-      </div>)}
-      </div>
-    
-  </div>
-  </div>
+    </div>
+    </div>
   )
 }
 

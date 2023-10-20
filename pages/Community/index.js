@@ -5,7 +5,7 @@ import styles from "../../styles/homecomponents/community.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import {BiSolidLeftArrowSquare} from 'react-icons/bi'
+import {BiSolidLeftArrowSquare,BiSolidRightArrowSquare} from 'react-icons/bi'
 
 export const getStaticProps = async () => {
   const resulting = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
@@ -55,8 +55,9 @@ const index = ({data}) => {
               
             ))}
           </div>
-          {/* <div>
-            <button><BiSolidLeftArrowSquare /></button>
+          {/* <div className={styles.buttons}>
+            <button><BiSolidLeftArrowSquare className={styles.leftbtn}/></button>
+            <button><BiSolidRightArrowSquare className={styles.leftbtn}/></button>
           </div> */}
           
 

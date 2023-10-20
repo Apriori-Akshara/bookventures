@@ -73,18 +73,18 @@ cursor: pointer;
   background-color: rgb(0, 0, 0);
 }
 @media screen and (max-width: 1200px){
-  .bvcontainer{
+  .bcontainer{
     grid-template-columns: 1fr 1fr;
   }
   .bvcard{
     width: 100%;
   }
-  .bvcontainer{
+  .bcontainer{
     padding: 50px 5vw;
   }
 }
 @media screen and (max-width: 768px){
-  .bvcontainer{
+  .bcontainer{
     grid-template-columns: 1fr;
   }
 

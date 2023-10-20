@@ -13,20 +13,26 @@ import Kids from '../components/homepage/middlecomponents/kidssection'
 const inter = Inter({ subsets: ["latin"] });
 
 export const getStaticProps = async () => {
-  const resulting = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
+  const [resulting,res2] = await Promise.all([ fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
     headers: {
      Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
    } 
-   });
-  const result = await resulting.json();
+   }),
+   fetch(`${process.env.NEXT_PUBLIC_URL}/awards?populate=*`, {
+    headers: {
+     Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
+   } 
+   }),]);
+  const [result,data2] = await Promise.all([resulting.json(),res2.json()])
   return {
     props: {
       product: result.data,
+      data2:data2.data,
     },
   };
 };
 
-const Home = ({product}) => {
+const Home = ({product,data2}) => {
   return (
     <>
       <Head>
@@ -40,7 +46,7 @@ const Home = ({product}) => {
         <Herosection />
         <Ads />
         <Reading />
-        <Books data={product}/>
+        <Books data={product} data2={data2}/>
         <Ads />
         <Kids data={product}/>
         <Lower />

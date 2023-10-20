@@ -24,7 +24,7 @@
 }
 .box h2, .box h5, .box h4{
   margin-top: 5px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -117,6 +117,9 @@
   }
   .box2{
     margin-top: 0px;
+  }
+  .box h2, .box h5, .box h4{
+    margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 768px){

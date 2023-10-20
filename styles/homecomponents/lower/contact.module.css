@@ -56,7 +56,7 @@ color: rgb(185, 185, 185);
   }
   .img{
     width: 100%;
-    height: 200px;
+    height: auto;
   }
   .left{
     width: 100%;
