@@ -20,6 +20,9 @@
 .hr{
   width: 7vw;
 }
+.active{
+  color:rgb(91, 91, 91);
+}
 .link{
   text-decoration: none;
 }
@@ -126,7 +129,6 @@ background-color: black;
 width: 10vw;
 height: 50px;
 }
-
 .heading{
   font-weight: 200;
   font-size: 36px;
@@ -211,6 +213,12 @@ cursor: pointer;
   color: white;
   background-color: black;
   border: none;
+}
+.buttons button:hover{
+  cursor: pointer;
+}
+.buttons button:disabled{
+  cursor:not-allowed;
 }
 @media screen and (max-width: 1200px){
   .bvcontainer{

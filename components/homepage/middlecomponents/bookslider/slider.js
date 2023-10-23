@@ -6,12 +6,14 @@ import Link from 'next/link';
 
 const slider = ({fiction}) => {
 
+  console.log(fiction)
+
   var settings = {
     infinite: true,
     speed: 200,
     slidesToShow: 3,
     slidesToScroll: 1,
-    initialSlide: 0,
+    initialSlide: 1,
     responsive: [
       {
         breakpoint: 1024,
@@ -43,7 +45,7 @@ const slider = ({fiction}) => {
     <>
      <Slider {...settings} className={styles.slider}> 
 
-       {fiction.reverse().slice(0,6).map(data =>
+       {fiction.reverse().slice(0,10).map(data =>
       <div key={data.id} className={styles.bvcard}>
       <Link className={styles.link} href={data.attributes.genre ? `/Authorbooks/${data.id}` : `/Awardwinners/${data.id}`} >
       <div className={styles.slide}>

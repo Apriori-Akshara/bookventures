@@ -61,7 +61,7 @@
   object-fit: cover;
 }
 .review{
-  color: #A5AC8C;
+  color: black;
   margin: 20px 0;
 }
 .fullreview{
@@ -70,6 +70,9 @@
 }
 .fullreview:hover{
   cursor: pointer;
+}
+.name{
+  font-weight: 600;
 }
 @media screen and (max-width: 1200px){
   .profiles{

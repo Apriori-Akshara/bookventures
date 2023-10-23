@@ -8,7 +8,7 @@ const slider = () => {
     infinite: true,
     speed: 200,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     initialSlide: 0,
     responsive: [
       {
@@ -40,13 +40,16 @@ const slider = () => {
 
   let arr = [
     {id:1,src:'/homepage/low/members-kids (3).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Arhan"},
-    {id:2,src:'/homepage/low/members-kids (4).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Ishanvi"},
-    {id:3,src:'/homepage/low/members-kids (7).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Swastik"},
     {id:4,src:'/homepage/low/members-adults (1).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Aparna"},
+    {id:2,src:'/homepage/low/members-kids (4).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Ishanvi"},
     {id:5,src:'/homepage/low/members-adults (2).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Nandini"},
-    {id:6,src:'/homepage/low/members-kids (2).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Sara"},
-    {id:7,src:'/homepage/low/members-kids (1).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Mishika"},
+    {id:3,src:'/homepage/low/members-kids (7).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Swastik"},
     {id:8,src:'/homepage/low/members-adults (3).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Vishaka"},
+
+    {id:6,src:'/homepage/low/members-kids (2).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Sara"},
+    {id:4,src:'/homepage/low/members-adults (4).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Priyanka"},
+    // {id:7,src:'/homepage/low/members-kids (1).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Mishika"},
+
   ]
 
   return (
@@ -63,61 +66,6 @@ const slider = () => {
         <div className={styles.name}>{data.name}</div>
       </div>
       </div>)}
-
-      {/* <div className={styles.card}>
-      <div className={styles.slide}>
-      <div className={styles.imgcontainer}>
-        <Image className={styles.profileimg} src={'/homepage/low/members-kids (2).jpeg'} width={300} height={300} alt='image'/>
-      </div>
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet</div>
-        <div className={styles.name}>Sara</div>
-        </div>
-      </div>
-      <div className={styles.card}>
-      <div className={styles.slide}>
-      <div className={styles.imgcontainer}>
-        <Image className={styles.profileimg} src={'/homepage/low/members-kids (3).jpeg'} width={300} height={300} alt='image'/>
-      </div>
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet</div>
-        <div className={styles.name}>Arhan</div>
-        </div>
-      </div>
-      <div className={styles.card}>
-      <div className={styles.slide}>
-      <div className={styles.imgcontainer}>
-        <Image className={styles.profileimg} src={'/homepage/low/members-kids (4).jpeg'} width={300} height={300} alt='image'/>
-      </div>
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet</div>
-        <div className={styles.name}>Ishanvi</div>
-        </div>
-      </div>
-      <div className={styles.card}>
-      <div className={styles.slide}>
-      <div className={styles.imgcontainer}>
-        <Image className={styles.profileimg} src={'/homepage/low/members-kids (1).jpeg'} width={300} height={300} alt='image'/>
-      </div>
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet</div>
-        <div className={styles.name}>Mishika</div>
-        </div>
-      </div>
-      <div className={styles.card}>
-      <div className={styles.slide}>
-      <div className={styles.imgcontainer}>
-        <Image className={styles.profileimg} src={'/homepage/low/members-kids (6).jpeg'} width={300} height={300} alt='image'/>
-      </div>
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet</div>
-        <div className={styles.name}>Naitik</div>
-        </div>
-      </div>
-      <div className={styles.card}>
-      <div className={styles.slide}>
-      <div className={styles.imgcontainer}>
-        <Image className={styles.profileimg} src={'/homepage/low/members-kids (5).jpeg'} width={300} height={300} alt='image'/>
-      </div>
-        <div className={styles.review}>"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet</div>
-        <div className={styles.name}>Ridhika</div>
-        </div>
-      </div> */}
       
      </Slider>
     </>
