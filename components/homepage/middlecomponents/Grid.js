@@ -9,24 +9,14 @@ const Grid = ({data}) => {
   const[count2,setCount2] = useState(6);
 
   function increment(){
-    scrollto()
     setCount(count+6);
     setCount2(count2+6)
   }
 
   function decrement(){
-    scrollto()
     setCount(count-6);
     setCount2(count2-6)
-
   }
-
-  const scrollto = () =>{
-    window.scrollTo({
-      top: 0, 
-      behavior: 'smooth'
-    });
-  };
 
   return (
     <div>
