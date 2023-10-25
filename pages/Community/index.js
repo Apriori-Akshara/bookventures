@@ -27,7 +27,7 @@ const index = ({data}) => {
  let nonfiction = data.filter(data => data.attributes.isfiction === false && data.attributes.iskids === false);
 
   return (
-    <div>
+    <>
       <Topcomponent />
       <div className={styles.container}>
         <div className={styles.topcontainer}>
@@ -63,7 +63,7 @@ const index = ({data}) => {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
