@@ -40,16 +40,18 @@ const slider = () => {
 
   let arr = [
     {id:1,src:'/homepage/low/members-kids (3).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Arhan"},
-    {id:4,src:'/homepage/low/members-adults (1).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Aparna"},
-    {id:2,src:'/homepage/low/members-kids (4).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Ishanvi"},
-    {id:5,src:'/homepage/low/members-adults (2).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Nandini"},
-    {id:3,src:'/homepage/low/members-kids (7).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Swastik"},
-    {id:8,src:'/homepage/low/members-adults (3).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Vishaka"},
+    {id:2,src:'/homepage/low/members-adults (1).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Aparna"},
+    {id:3,src:'/homepage/low/members-kids (4).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Ishanvi"},
+    {id:4,src:'/homepage/low/members-adults (2).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Nandini"},
+    {id:5,src:'/homepage/low/members-kids (7).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Swastik"},
+    {id:6,src:'/homepage/low/members-adults (3).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Vishaka"},
 
-    {id:6,src:'/homepage/low/members-kids (2).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Sara"},
-    {id:4,src:'/homepage/low/members-adults (4).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Priyanka"},
-    // {id:7,src:'/homepage/low/members-kids (1).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Mishika"},
-
+    {id:7,src:'/homepage/low/members-kids (2).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Sara"},
+    {id:8,src:'/homepage/low/members-adults (4).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Priyanka"},
+    {id:9,src:'/homepage/low/members-kids (1).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Mishika"},
+    {id:10,src:'/homepage/low/members-adults (5).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Mandika"},
+    {id:11,src:'/homepage/low/members-kids (8).jpeg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Naitik"},
+    {id:12,src:'/homepage/low/members-adults (6).jpg',review:"amazing club. if thee enjoys book and want to discuss with others. Lorem ipsum dolor sit amet",name:"Sanyam"},
   ]
 
   return (

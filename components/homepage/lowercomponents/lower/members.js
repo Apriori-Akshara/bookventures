@@ -6,7 +6,7 @@ import Slider from './slider'
 const members = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>What our Members have to say about us</h1>
+      <h1 className={styles.title}>What our Members say about us</h1>
       {/* <hr className={styles.hr} /> */}
       {/* <div className={styles.info}>Overall rating <b>5/5 averaged</b> <br />
         on rating of 3 people</div> */}
