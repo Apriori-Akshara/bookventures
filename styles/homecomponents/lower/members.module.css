@@ -123,11 +123,12 @@
   .imgcont{
     height: 180px;
     overflow:visible;
+  }  
+  .svgcontainer{
+    margin-right: 4%;
   }
   .img{
     height: auto;
   }
-  .svgcontainer{
-    margin-right: 4%;
-  }
+
 }
