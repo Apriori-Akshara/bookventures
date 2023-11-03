@@ -45,7 +45,11 @@ const index = ({data}) => {
 
           <h1 className={styles.title}>Non-Fiction</h1>
 
-          <div className={styles.bvcontainer}>
+          <div>
+          <Grid data={nonfiction}/>
+          </div>
+
+          {/* <div className={styles.bvcontainer}>
             {nonfiction.reverse().slice(0,6).map((data) => (
               <div className={styles.bvcard} key={data.id}>
               <Link className={styles.link} href={`/Authorbooks/${data.id}`} >
@@ -59,7 +63,7 @@ const index = ({data}) => {
                 </Link>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer />

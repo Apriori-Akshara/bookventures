@@ -21,10 +21,6 @@ const Grid = ({data}) => {
     return 0;
 });
 
-
-console.log(reversed)
-
-
   function increment(){
     setCount(count+6);
     setCount2(count2+6)

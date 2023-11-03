@@ -22,6 +22,7 @@
 }
 .active{
   color:rgb(91, 91, 91);
+  cursor:not-allowed;
 }
 .link{
   text-decoration: none;
@@ -216,9 +217,6 @@ cursor: pointer;
 }
 .buttons button:hover{
   cursor: pointer;
-}
-.buttons button:disabled{
-  cursor:not-allowed;
 }
 @media screen and (max-width: 1200px){
   .bvcontainer{

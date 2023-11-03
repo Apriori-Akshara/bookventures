@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../../../styles/homecomponents/books.module.css'
 import Slider from './bookslider/slider'
+import Awards from './bookslider/awardsslider'
 
 const bookssection = ({data,data2}) => {
 
@@ -15,7 +16,7 @@ const bookssection = ({data,data2}) => {
       <div className={styles.bvsection}>
         <h1 className={styles.title}>Fiction</h1>
         <div className={styles.bcontainer}>
-          <Slider fiction={data2}/>
+          <Awards fiction={data2}/>
           <Slider fiction={fictionindian}/>
           <Slider fiction={fictionnonindian}/>  
         </div>

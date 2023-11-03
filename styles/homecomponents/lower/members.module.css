@@ -31,6 +31,7 @@
   margin:0 2% 0 1%;
   padding-left:7%;
   width: 90vw;
+  position: relative;
 }
 .slide{
   width: 80%;
@@ -74,6 +75,15 @@
 .name{
   font-weight: 600;
 }
+.svgcontainer{
+  position: absolute;
+  top: 43%;
+  margin-right: 9.3%;
+}
+.svg{
+  height: 40px;
+  width: 100%;
+}
 @media screen and (max-width: 1200px){
   .profiles{
     top: 10%;
@@ -87,11 +97,11 @@
   .img{
     height: 480px;
   }
+  .svgcontainer{
+    margin-right: 9.9%;
+  }
 }
 @media screen and (max-width: 768px){
-  .container{
-    height: 750px;
-  }
   .profiles{
     flex-direction: column;
     position:unset;
@@ -116,5 +126,8 @@
   }
   .img{
     height: auto;
+  }
+  .svgcontainer{
+    margin-right: 10.7%;
   }
 }
