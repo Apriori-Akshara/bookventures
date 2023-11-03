@@ -78,7 +78,7 @@
 .svgcontainer{
   position: absolute;
   top: 43%;
-  margin-right: 9.3%;
+  margin-right: 13%;
 }
 .svg{
   height: 40px;
@@ -98,7 +98,7 @@
     height: 480px;
   }
   .svgcontainer{
-    margin-right: 9.9%;
+    margin-right: 14.5%;
   }
 }
 @media screen and (max-width: 768px){
@@ -128,6 +128,6 @@
     height: auto;
   }
   .svgcontainer{
-    margin-right: 10.7%;
+    margin-right: 55%;
   }
 }
