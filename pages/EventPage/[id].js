@@ -33,7 +33,7 @@ const EventPage = () => {
     <div>
       <Topcomponent />
         <div className={styles.container}>
-        <div className={styles.topic}>{event[0].title}</div>
+        <div className={styles.topic}>hello</div>
         </div>
       <Footer />
     </div>
