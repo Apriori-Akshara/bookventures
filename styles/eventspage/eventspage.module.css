@@ -1,0 +1,52 @@
+.container{
+  margin-top: 180px;
+  padding-top: 30px;
+}
+.topic{
+  text-align: center;
+  color: #A5AC8C;
+  font-size: 36px;
+  letter-spacing: 3px;
+  padding: 0 10vw;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 30px 12.5vw;
+  justify-content: center;
+  gap: 7.5vw;
+}
+.card{
+  width: 20vw;
+  border: 1px solid rgb(101, 101, 101);
+  border-radius: 15px;
+  text-align: center;
+  padding-top: 10px;
+  color: white;
+}
+.imgcontainer{
+  width: 20vw;
+  height: 300px;
+  overflow:hidden;  
+}
+.img{
+  object-fit: contain;
+  transition: 0.5s;
+  transform: scale(1.25);
+}
+.card:hover .img{
+  transform: scale(1);
+}
+.info{
+  padding: 10px;
+}
+.info h3{
+  margin: 0;
+}
+.info p{
+  margin: 0;
+}
+.link{
+  text-decoration: none;
+  color: white;
+}

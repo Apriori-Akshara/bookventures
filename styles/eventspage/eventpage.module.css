@@ -1,0 +1,11 @@
+.container{
+  margin-top: 180px;
+  padding-top: 30px;
+}
+.topic{
+  text-align: center;
+  color: #A5AC8C;
+  font-size: 36px;
+  letter-spacing: 3px;
+  padding: 0 10vw;
+}
