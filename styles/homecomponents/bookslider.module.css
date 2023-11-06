@@ -75,6 +75,7 @@
     width: 80vw;
   }
   .slide{
-    width: 100%;
+    width: 98%;
+    margin-left: 1%;
   }
 }
