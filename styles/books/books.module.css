@@ -26,6 +26,7 @@
   text-align: center;
   width: 20vw;
   height: 380px;
+  margin-bottom: 30px;
 }
 .img{
   width: 15vw;
@@ -33,6 +34,9 @@
 }
 .name{
   color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 @media screen and (max-width: 1200px){
   .container{
@@ -66,5 +70,8 @@
   .img{
     width: 100%;
     height: auto;
+  }
+  .name{
+    font-size: 24px;
   }
 }

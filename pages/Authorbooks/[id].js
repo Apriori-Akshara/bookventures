@@ -54,8 +54,8 @@ const books = ({product}) => {
         {product.books.data.map(data =>
           <div className={styles.card} key={data.id}>
           <Link className={styles.link} href={`/Book/${data.id}`}>
-            <Image className={styles.img} loader={() => data.attributes.img.data.attributes.url} unoptimized={true} src={data.attributes.img.data.attributes.url} width={400} height={400} alt="Book Image" />
             <div className={styles.name}>{data.attributes.name}</div>
+            <Image className={styles.img} loader={() => data.attributes.img.data.attributes.url} unoptimized={true} src={data.attributes.img.data.attributes.url} width={400} height={400} alt="Book Image" />
           </Link>
           </div>
         )}
