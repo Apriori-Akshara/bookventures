@@ -70,8 +70,9 @@
 }
 @media screen and (max-width: 768px){
   .slider{
-    margin:0 0 50px 4%;
-    padding-left:0.5%;
+    margin:0 0 50px 5%;
+    padding-left:0%;
+    padding-right: 1%;
     width: 80vw;
   }
   .slide{

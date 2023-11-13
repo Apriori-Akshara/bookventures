@@ -7,18 +7,21 @@ import Link from "next/link";
 const index = () => {
 
   const data = [
-   { id:1,
-    title:'Halloween Party',
-    date:'31st Oct 2023',
-    url:'/eventspage/posters/October 31,2023.jpg'},
-    { id:2,
+    { id:1,
       title:'Halloween Party',
       date:'31st Oct 2023',
-      url:'/eventspage/posters/October 31,2023.jpg'},
-      { id:3,
-        title:'Halloween Party',
-        date:'31st Oct 2023',
-        url:'/eventspage/posters/October 31,2023.jpg'},
+      url:'/eventspage/posters/October 31,2023.jpg',
+      images:['/eventspage/images/halloween/img (1).jpeg','/eventspage/images/halloween/img (2).jpeg','/eventspage/images/halloween/img (3).jpeg','/eventspage/images/halloween/img (4).jpeg']},
+      { id:2,
+        title:'Young Poet Award',
+        date:'TBD',
+        url:'/eventspage/posters/YoungPoetAward.png',
+        images:[]},
+        { id:3,
+          title:'...',
+          date:'...',
+          url:'',
+          images:[]},
    ]
 
   return (

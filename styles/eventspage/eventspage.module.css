@@ -1,5 +1,5 @@
 .container{
-  margin-top: 180px;
+  margin-top: 150px;
   padding-top: 30px;
 }
 .topic{
@@ -7,7 +7,8 @@
   color: #A5AC8C;
   font-size: 36px;
   letter-spacing: 3px;
-  padding: 0 10vw;
+  padding: 20px 10vw;
+  background: black;
 }
 .grid{
   display: grid;
@@ -21,7 +22,7 @@
   border: 1px solid rgb(101, 101, 101);
   border-radius: 15px;
   text-align: center;
-  padding-top: 10px;
+  padding: 10px 10px 0;
   color: white;
 }
 .imgcontainer{
