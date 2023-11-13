@@ -61,11 +61,13 @@
   }
   .cards{
     grid-template-columns: 1fr;
-    row-gap: 50px;
+    row-gap: 20px;
   }
   .card{
     width: 100%;
     height: auto;
+    padding-bottom: 50px;
+    border-bottom: 3px solid white;
   }
   .img{
     width: 100%;
