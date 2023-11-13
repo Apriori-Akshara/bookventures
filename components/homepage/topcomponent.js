@@ -11,9 +11,12 @@ const Topcomponent = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
+  console.log(window.scrollY)
+  console.log(lastScrollY)
+
     const controlNavbar = () => {
     if (typeof window !== 'undefined') { 
-      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+      if (window.scrollY >= lastScrollY) { // if scroll down hide the navbar
         setShow(false); 
       } else { // if scroll up show the navbar
         setShow(true);  
