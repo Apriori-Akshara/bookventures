@@ -108,4 +108,9 @@
   .img{
     width: 100%;
   }
+  .titlename{
+    width: 45vw;
+    display: inline-block;
+    font-weight: 600;
+  }
 }

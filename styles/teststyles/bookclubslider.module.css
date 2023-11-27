@@ -1,0 +1,62 @@
+.slider{
+  margin:30px 2% 30px 6%;
+  padding-left:10%;
+  width: 25vw;
+}
+.card{
+  padding: 15px 2vw 25px;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.5s;
+}
+.inner{
+  width: 17vw;
+  background-color: black;
+  padding: 10px 1vw 30px;
+  border-radius: 10%;
+  box-shadow: rgba(0,0,0, 0.3) 6px 2px 16px 0px, rgba(0,0,0, 0.6) -6px -2px 16px 0px;
+  transition: 0.5s;
+}
+.inner:hover{
+  box-shadow: rgba(0,0,0, 0.7) 6px 2px 16px 0px, rgba(0,0,0,7) -6px -2px 16px 0px;
+}
+.card:hover{
+  cursor: pointer;
+}
+.name{
+  font-size: 18px;
+  margin:10px 0;
+  font-weight: 700;
+}
+.imgcont{
+  width: 17vw;
+  overflow: hidden;
+}
+.img{
+  width: 17vw;
+  height: 200px;
+  padding: 20px 0;
+  transition: 0.5s;
+}
+.inform{
+  font-weight: 600;
+  padding: 10px;
+}
+.info{
+  width: 17vw;
+  position: absolute;
+  visibility: hidden;
+  bottom: 0px;
+  transition: 0.5s;
+  height: 100px;
+}
+.card:hover .info{
+  bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.9);
+  visibility: visible;
+}
+.names{
+  background-color: white;
+  color: black;
+  padding: 2px 5px;
+}

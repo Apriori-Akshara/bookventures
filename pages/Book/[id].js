@@ -64,10 +64,10 @@ const Book = ({product}) => {
           <div className={styles.summary}>{show ? product.summary.slice(0,450)+(product.summary.length > 450 ? '...' : '') : product.summary} <br/><button className={product.summary.length > 450 ? styles.show : styles.hide} onClick={showMore}>Read More</button></div>
           
           <div className={styles.infocont}>
-            {product.ogname ? <div className={styles.info}><b>Original title</b> : <div>{product.ogname}</div></div> : <div className={styles.info}><b>Original title</b> : <div>{product.name}</div></div>}
-            {product.isbn && <div className={styles.info}><b>ISBN</b> : <div>{product.isbn}</div></div>}
-            {product.lang ? <div className={styles.info}><b>Language</b> : <div>{product.lang}</div></div> : <div className={styles.info}><b>Language</b> : <div>English</div></div>}
-            {product.pubdate && <div className={styles.info}><b>Published</b> : <div>{product.pubdate}</div></div>}
+            {product.ogname ? <div className={styles.info}><div className={styles.titlename}>Original title</div>: <div>{product.ogname}</div></div> : <div className={styles.info}><div className={styles.titlename}>Original title</div> : <div>{product.name}</div></div>}
+            {product.isbn && <div className={styles.info}><b>ISBN</b>: <div>{product.isbn}</div></div>}
+            {product.lang ? <div className={styles.info}><b>Language</b>: <div>{product.lang}</div></div> : <div className={styles.info}><b>Language</b> : <div>English</div></div>}
+            {product.pubdate && <div className={styles.info}><b>Published</b>: <div>{product.pubdate}</div></div>}
           </div>
         </div>
         <div className={styles.Adcontainer}>

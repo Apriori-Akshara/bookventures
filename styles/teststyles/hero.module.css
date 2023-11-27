@@ -1,0 +1,44 @@
+.container{
+  padding: 5%;
+  padding-right: 20%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+  color: white;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 75vw;
+  height: 100vw;
+  z-index: 10;
+}
+.leftcontainer{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.title{
+  margin-left: 27%;
+  font-size: 30px;
+}
+.largetext{
+  font-size: 52px;
+}
+.smalltext{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.btn{
+  color: white;
+  background-color: rgb(51, 51, 51);
+  border: 1px solid rgb(51, 51, 51);
+  height: 40px;
+  width: 50%;
+  transition: 0.5s;
+}
+.btn:hover{
+  background-color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}

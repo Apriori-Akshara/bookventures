@@ -1,8 +1,6 @@
 import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from "../../styles/homecomponents/community.module.css";
-import Image from "next/image";
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import Grid from '../../components/homepage/middlecomponents/Grid'
 

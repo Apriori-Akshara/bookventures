@@ -1,0 +1,23 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5%;
+  gap: 7%;
+  position: fixed;
+  width: 90vw;
+  z-index: 100;
+}
+.container ul{
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+.container ul li, .link{
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+.logoimg{
+  height: 50px;
+  width: auto;
+}

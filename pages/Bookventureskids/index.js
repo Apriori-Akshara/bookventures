@@ -2,9 +2,8 @@ import React from 'react'
 import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/kids/kids.module.css'
-import Link from 'next/link';
-import Image from 'next/image';
 import dynamic from "next/dynamic";
+import Grid from '../../components/homepage/middlecomponents/Grid'
 
 export const getStaticProps = async () => {
   const resulting = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
@@ -32,7 +31,11 @@ const index = ({data}) => {
       <div className={styles.topic}>Bookventures Kids</div>
       <h1 className={styles.title}>Fiction</h1>
 
-      <div className={styles.bvcontainer}>
+      <div>
+        <Grid data={fiction}/>
+      </div>
+
+      {/* <div className={styles.bvcontainer}>
             {fiction.map((data) => (
               
               <div className={styles.bvcard} key={data.id}>
@@ -48,7 +51,7 @@ const index = ({data}) => {
               </div>
               
             ))}
-          </div>
+          </div> */}
 
           {/* <h1 className={styles.title}>Non-Fiction</h1>
 

@@ -5,7 +5,10 @@
   margin: 0;
   box-sizing: border-box;
   padding: 0 0 10px;
-  background-color: black;
+  background-color: rgb(40, 40, 40);
+}
+.bcontainer{
+  background-color: rgb(40, 40, 40);
 }
 .topcontainer{
   text-align: center;
@@ -157,7 +160,6 @@ border-radius: 10px;
 .bvcard:hover{
 cursor: pointer;
 }
-
 .bvimgcont{
   width: 90%;
   height: 150px;
@@ -190,9 +192,8 @@ cursor: pointer;
   top: 0;
   position: fixed;
 }
-
 .bvsection{
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(40, 40, 40);
 }
 @media screen and (max-width: 1200px){
   .bcontainer{

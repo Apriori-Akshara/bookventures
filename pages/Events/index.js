@@ -8,20 +8,20 @@ const index = () => {
 
   const data = [
     { id:1,
+      title:"Readers' Salon",
+      date:'Sat, 26th Nov 2023 ',
+      url:'/eventspage/posters/Podcast Insta.jpg',
+      images:['/eventspage/posters/Podcast Insta.jpg','/eventspage/posters/Podcast Insta.jpg','/eventspage/posters/Podcast Insta.jpg','/eventspage/posters/Podcast Insta.jpg']},
+    { id:2,
       title:'Halloween Party',
       date:'31st Oct 2023',
       url:'/eventspage/posters/October 31,2023.jpg',
       images:['/eventspage/images/halloween/img (1).jpeg','/eventspage/images/halloween/img (2).jpeg','/eventspage/images/halloween/img (3).jpeg','/eventspage/images/halloween/img (4).jpeg']},
-      { id:2,
-        title:'Young Poet Award',
+      { id:3,
+        title:'Young Poet Award 2023',
         date:'TBD',
         url:'/eventspage/posters/YoungPoetAward.png',
-        images:[]},
-        { id:3,
-          title:'...',
-          date:'...',
-          url:'',
-          images:[]},
+        images:['/eventspage/posters/YoungPoetAward.png']},
    ]
 
   return (

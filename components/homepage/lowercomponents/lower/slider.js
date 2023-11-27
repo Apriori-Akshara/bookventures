@@ -64,7 +64,7 @@ const slider = () => {
      
       {arr.map(data => <div key={data.id} className={styles.card}>
       <div className={styles.slide}>
-      <div className={styles.svgcontainer}><Image className={styles.svg} src={'/slidersvg/quote-svgrepo-com.svg'} width={300} height={300}/></div>
+      <div className={styles.svgcontainer}><Image className={styles.svg} src={'/slidersvg/quote-svgrepo-com.svg'} width={300} height={300} alt='image'/></div>
       <div className={styles.imgcontainer}>
         <Image className={styles.profileimg} src={data.src} width={300} height={300} alt='image'/>
       </div>

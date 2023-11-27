@@ -41,7 +41,7 @@ const slider = ({fiction}) => {
   };
 
   return (
-    <>
+    <div className={styles.slidercontainer}>
      <Slider {...settings} className={styles.slider}> 
 
        {reversed.slice(0,10).map(data =>
@@ -61,7 +61,7 @@ const slider = ({fiction}) => {
       </div>)}
       
      </Slider>
-    </>
+    </div>
   )
 }
 

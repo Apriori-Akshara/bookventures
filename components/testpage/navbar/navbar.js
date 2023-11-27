@@ -1,11 +1,15 @@
 import React from 'react'
-import styles from '../../../styles/topcomponents/nav.module.css'
+import styles from '../../../styles/teststyles/test.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 
-const navbar = (props) => {
+const navbar = () => {
+
+  
 
   return (
-    <div className={props.click ? `${styles.left} ${styles.container}` : `${styles.right} ${styles.container}`}>
+    <div className={styles.container}>
+    <div className={styles.logo}><div><Image className={styles.logoimg} src={'/bvlogo.png'} width={200} height={200}/></div></div>
       <ul>
         <Link className={styles.link} href='/'>Home</Link>
         <Link className={styles.link} href='/Bookventureskids'>Bookventures Kids</Link>
@@ -13,7 +17,7 @@ const navbar = (props) => {
         <Link className={styles.link} href='/Bookclub'>Bookclubs</Link>
         <Link className={styles.link} href='/Community'>Join a Community</Link>
         <Link className={styles.link} href='/Booksearch'>Book Search</Link>
-        <Link className={styles.link} href='/Events'>Events</Link>
+        <li>Events</li>
         <Link className={styles.link} href='/ContactUs'>Contact Us</Link>
         <li>About Us</li>
       </ul>

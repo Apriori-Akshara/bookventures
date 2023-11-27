@@ -50,7 +50,7 @@
 .slick-prev:before,
 .slick-next:before
 {
-    padding:5px 35px;
+    padding:5px 25px;
     /* border: 1px solid white; */
     font-family: 'slick';
     font-size: 50px;
@@ -74,6 +74,7 @@
 {
     content: '❮';
 }
+
 [dir='rtl'] .slick-prev:before
 {
     content: '❯';

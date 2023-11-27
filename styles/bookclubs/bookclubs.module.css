@@ -1,0 +1,118 @@
+.container{
+  margin-top: 150px;
+  padding-top: 30px;
+  background: rgb(51,51,51);
+  color: white;
+}
+.topic{
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  word-spacing: 1px;
+  font-size: 30px;
+  /* background: linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(8,8,10,1) 54%, rgba(48,46,46,1) 100%, rgba(2,0,36,1) 100%, rgba(49,90,98,1) 100%); */
+  background: black;
+}
+.subcontainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 80px 14vw;
+  row-gap:30px;
+  column-gap:5vw ;
+}
+.card{
+  background-color: rgb(29, 29, 29);
+  width: 16vw;
+  padding: 10px 1vw 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.5s;
+}
+.card:hover{
+  box-shadow: rgb(0, 0, 0) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  cursor: pointer;
+}
+.name{
+  text-align: center;
+  font-size: 18px;
+  margin:10px 0;
+  font-weight: 700;
+}
+.imgcont{
+  width: 16vw;
+  overflow: hidden;
+}
+.img{
+  width: 16vw;
+  height: 200px;
+  padding: 20px 0;
+  transition: 0.5s;
+}
+.inform{
+  font-weight: 600;
+  padding: 10px;
+}
+.info{
+  width: 16vw;
+  position: absolute;
+  visibility: hidden;
+  bottom: 0px;
+  transition: 0.5s;
+  height: 100px;
+}
+.card:hover .info{
+  bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.9);
+  visibility: visible;
+}
+.card:hover .img{
+  transform: scale(1.05);
+}
+.names{
+  background-color: white;
+  color: black;
+  padding: 2px 5px;
+}
+@media screen and (max-width: 1200px){
+  .container{
+    margin-top: 100px;
+  }
+  .subcontainer{
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 5vw;
+  }
+  .card{
+    width: 40vw;
+  }
+  .img{
+    width: 40vw;
+  }
+  .imgcont{
+    width: 40vw;
+  }
+  .info{
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 768px){
+  .container{
+    margin-top: 115px;
+  }
+  .subcontainer{
+    grid-template-columns: 1fr;
+  }
+  .card{
+    width: 100%;
+  }
+  .img{
+    width: 100%;
+  }
+  .imgcont{
+    width: 100%;
+  }
+  .info{
+    width: 98%;
+  }
+}
