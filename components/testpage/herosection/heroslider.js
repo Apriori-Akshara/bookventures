@@ -5,7 +5,7 @@ import styles from '../../../styles/teststyles/slider.module.css'
 const [image1, image2, image3] = [ "/homepage/heroimage/2.png","/homepage/heroimage/3.png","/homepage/heroimage/4.png",
 ]
 
-const heroslider = () => {
+const Heroslider = () => {
 
   const [selectedImage, setSelectedImage] = useState(0)
   const [allImages, setAllImages] = useState([image1, image2, image3])
@@ -25,4 +25,4 @@ const heroslider = () => {
   )
 }
 
-export default heroslider
+export default Heroslider
