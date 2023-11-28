@@ -222,6 +222,9 @@ cursor: pointer;
   cursor: pointer;
 }
 @media screen and (max-width: 1200px){
+  .container{
+    margin-top: 100px;
+  }
   .bvcontainer{
     grid-template-columns: 1fr 1fr;
   }
@@ -233,6 +236,9 @@ cursor: pointer;
   }
 }
 @media screen and (max-width: 768px){
+  .container{
+    margin-top: 110px;
+  }
   .bvcontainer{
     grid-template-columns: 1fr;
   }

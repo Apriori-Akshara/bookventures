@@ -53,3 +53,32 @@
   text-decoration: none;
   color: white;
 }
+@media screen and (max-width: 1200px){
+  .container{
+    margin-top: 100px;
+  }
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  .card{
+    width: 35vw;
+  }
+  .imgcontainer{
+    width: 35vw;
+  }
+}
+@media screen and (max-width: 768px){
+  .grid{
+    grid-template-columns: 1fr;
+    padding: 20px 10%;
+  }
+  .card{
+width: 90%;
+  }
+  .imgcontainer{
+    width: 100%;
+  }
+  .img{
+    transform: scale(1);
+  }
+}

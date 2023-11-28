@@ -43,6 +43,9 @@ margin-left: 20%;
   margin-top: 20px;
 }
 @media screen and (max-width: 1200px){
+  .container{
+    margin-top: 100px;
+  }
   .slider{
     width:90%;
     padding-left: 1%;
@@ -61,6 +64,9 @@ margin-left: 20%;
     }
 }
 @media screen and (max-width: 1200px){
+  .container{
+    margin-top: 110px;
+  }
   .slider{
     width:85%;
     padding-left: 1%;
@@ -79,5 +85,8 @@ margin-left: 20%;
     }
     .bigimage{
       height: 400px;
+    }
+    .details{
+      font-size: 24px;
     }
 }
