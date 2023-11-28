@@ -46,7 +46,7 @@ const slider = () => {
 
 
     {id:5,src:'/homepage/low/members-kids (7).jpeg',review:"I just love the vocab quizzes, storytelling activities and writing contests because I always manage to win prizes.",name:"Swastik"},
-    {id:6,src:'/homepage/low/members-adults (3).jpg',review:"Of all the book clubs I have been a part of, this is the most dynamic one since they have tons of events that one can be a part of.",name:"Vishaka"},
+    {id:6,src:'/homepage/low/members-adults (3).jpg',review:"Of all the book clubs I have been a part of, this is the most dynamic one since they also organize several events.",name:"Vishaka"},
     {id:7,src:'/homepage/low/members-kids (2).jpeg',review:"All the teachers are excellent and very helpful. My confidence has improved after joining Bookventures Kids.",name:"Sara"},
     {id:8,src:'/homepage/low/members-adults (4).jpg',review:"It is rare to connect with other readers in a conducive environment that also allows for literary discussions in a meaningful way.",name:"Priyanka"},
 
