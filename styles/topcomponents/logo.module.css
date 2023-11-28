@@ -39,7 +39,7 @@
 .text{
   font-size: 22px;
   word-spacing: 1px;
-  font-weight: 400;
+  font-weight: 600;
 }
 @media screen and (max-width: 1200px){
   .container{

@@ -23,6 +23,7 @@ const index = ({data}) => {
   
  let fiction = data.filter(data => data.attributes.isfiction === true && data.attributes.iskids === false);
  let nonfiction = data.filter(data => data.attributes.isfiction === false && data.attributes.iskids === false);
+ let kidsfiction = data.filter(data => data.attributes.isfiction === true && data.attributes.iskids === true);
 
   return (
     <>
@@ -45,6 +46,13 @@ const index = ({data}) => {
 
           <div>
           <Grid data={nonfiction}/>
+          </div>
+
+
+          <h1 className={styles.title}>Bookventures kids</h1>
+
+          <div>
+          <Grid data={kidsfiction}/>
           </div>
 
           {/* <div className={styles.bvcontainer}>
