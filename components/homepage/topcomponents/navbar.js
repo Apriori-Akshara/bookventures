@@ -15,7 +15,7 @@ const navbar = (props) => {
         <Link className={styles.link} href='/Booksearch'>Book Search</Link>
         <Link className={styles.link} href='/Events'>Events</Link>
         <Link className={styles.link} href='/ContactUs'>Contact Us</Link>
-        <li>About Us</li>
+        <Link className={styles.link} href='/AboutUs'>About Us</Link>
       </ul>
     </div>
   )
