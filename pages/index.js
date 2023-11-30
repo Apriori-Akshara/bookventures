@@ -9,6 +9,9 @@ import Footer from "../components/homepage/bottomcomponent/footer";
 import Ads from '../components/homepage/ad/ads'
 import dynamic from "next/dynamic";
 import Kids from '../components/homepage/middlecomponents/kidssection'
+import Modal from "@/components/Modal/Modal";
+import { useEffect, useState } from "react";
+import MyComponent from '../components/Modal/Mycomponent'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +36,16 @@ export const getStaticProps = async () => {
 };
 
 const Home = ({product,data2}) => {
+
+  const [isOpen,setIsOpen] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsOpen(true)
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <Head>
@@ -52,6 +65,9 @@ const Home = ({product,data2}) => {
         <Lower />
         <Footer />
       </div>
+      <Modal open={isOpen}>
+        <MyComponent onClose={() => setIsOpen(false)}/>
+      </Modal>
     </>
   );
 }

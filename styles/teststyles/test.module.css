@@ -6,6 +6,7 @@
   position: fixed;
   width: 90vw;
   z-index: 100;
+  transition: 0.5s;
 }
 .container ul{
   display: flex;
@@ -17,7 +18,45 @@
   text-decoration: none;
   list-style: none;
 }
+.dark{
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 20px 5%;
+  gap: 7%;
+  position: fixed;
+  width: 90vw;
+  z-index: 100;
+  transition: 0.5s;
+}
+.dark ul{
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+.dark ul li, .link{
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
 .logoimg{
   height: 50px;
   width: auto;
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: none;
+  z-index: 1000;
+  height: 140px;
+  transition: 0.3s;
+}
+.none{
+  position: fixed;
+  top: -500px;
+  width: 100%;
+  z-index: 1000;
+  height: 140px;
+  transition: 0.3s;
 }

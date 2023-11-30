@@ -10,7 +10,7 @@ const navbar = (props) => {
         <Link className={styles.link} href='/'>Home</Link>
         <Link className={styles.link} href='/Bookventureskids'>Bookventures Kids</Link>
         <li>Quizzes</li>
-        <Link className={styles.link} href='/Bookclub'>Bookclubs</Link>
+        <Link className={styles.link} href='/Bookclub'>Book Clubs</Link>
         <Link className={styles.link} href='/Community'>Join a Community</Link>
         <Link className={styles.link} href='/Booksearch'>Book Search</Link>
         <Link className={styles.link} href='/Events'>Events</Link>

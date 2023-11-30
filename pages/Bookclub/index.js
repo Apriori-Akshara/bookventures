@@ -9,35 +9,35 @@ const index = () => {
     {
       id:1,
       src:'/bookclubs/sudhamurty/sudhamurty.jpeg',
-      name: 'Sudha Murty Bookclub',
+      name: 'Sudha Murty Book Club',
       date: 'TBD',
       time: 'TBD',
     },
     {
       id:2,
       src:'/bookclubs/ruskinbond/ruskinbond.jpeg',
-      name: 'Ruskin Bond Bookclub',
+      name: 'Ruskin Bond Book Club',
       date: 'TBD',
       time: 'TBD',
     },
     {
       id:3,
       src:'/bookclubs/bookawards/bookerprize.jpeg',
-      name: 'Booker Prize Bookclub',
+      name: 'Booker Prize Book Club',
       date: 'TBD',
       time: 'TBD',
     },
     {
       id:4,
       src:'/bookclubs/bookawards/jcbprize.jpeg',
-      name: 'JCB Prize Bookclub',
+      name: 'JCB Prize Book Club',
       date: 'TBD',
       time: 'TBD',
     },
     {
       id:5,
       src:'/bookclubs/bookawards/attagalatta.png',
-      name: 'Atta Galatta Bookclub',
+      name: 'Atta Galatta Book Club',
       date: 'TBD',
       time: 'TBD',
     },
@@ -47,7 +47,7 @@ const index = () => {
     <div>
       <Topcomponent />
         <div className={styles.container}>
-          <div className={styles.topic}>Bookclubs</div>
+          <div className={styles.topic}>Book Clubs</div>
             <div className={styles.subcontainer}>
             {info.map(data => <div key={data.id} className={styles.card}>
                 <h3 className={styles.name}>{data.name}</h3>
