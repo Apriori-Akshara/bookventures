@@ -5,7 +5,7 @@ import Image from 'next/image'
 const reading = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Why is Reading so Important?</h1>
+      <h1 className={styles.title}>Why is reading so important?</h1>
       <div className={styles.first}>
         <div>
           <Image className={styles.img} src={'/homepage/reading/3.jpg'} width={500} height={400} alt="image"/>
