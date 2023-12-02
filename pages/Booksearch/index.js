@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import Topcomponent from "../../components/homepage/topcomponent";
+// import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/booksearch/booksearch.module.css'
 import Link from 'next/link';
@@ -7,6 +7,7 @@ import Image from 'next/image';
 // import {BsSearch} from 'react-icons/bs'
 import axios from "axios";
 import dynamic from "next/dynamic";
+import Navbar from '../../components/testpage/navbar/navbar' 
 
 const Index = () => {
 
@@ -34,7 +35,7 @@ console.log(starts)
   
   return (
     <div>
-      <Topcomponent />
+      <Navbar />
       <div className={styles.container}>
       <div className={styles.topic}>Search For The Books You Like</div>
       <h1 className={styles.title}>Search</h1>

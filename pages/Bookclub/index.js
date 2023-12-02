@@ -2,6 +2,7 @@ import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/bookclubs/bookclubs.module.css'
 import Image from "next/image";
+import Navbar from '../../components/testpage/navbar/navbar' 
 
 const index = () => {
 
@@ -45,7 +46,7 @@ const index = () => {
 
   return (
     <div>
-      <Topcomponent />
+      <Navbar />
         <div className={styles.container}>
           <div className={styles.topic}>Book Clubs</div>
             <div className={styles.subcontainer}>

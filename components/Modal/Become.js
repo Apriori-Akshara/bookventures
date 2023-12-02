@@ -64,7 +64,7 @@ export default function Become() {
             setFormValues({ ...formValues, city: e.target.value })
           } required/> */}
           <select className={styles.input} name="city" id="city" value={formValues.city} onChange={(e) => setFormValues({ ...formValues, city: e.target.value })}>
-            {cities.sort().map(data=><option key={data} value={data}>{data}</option>)}
+            {cities.sort().map(data=><option classname={styles.states} key={data} value={data}>{data}</option>)}
           </select>
       </div>
         <button type="submit" className={styles.button}>Submit</button>

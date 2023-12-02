@@ -3,6 +3,7 @@ import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from "../../styles/eventspage/eventspage.module.css"
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from '../../components/testpage/navbar/navbar' 
 
 const index = () => {
 
@@ -26,7 +27,7 @@ const index = () => {
 
   return (
     <div>
-      <Topcomponent />
+      <Navbar />
       <div className={styles.container}>
       <div className={styles.topic}>Events</div>
         <div className={styles.grid}>

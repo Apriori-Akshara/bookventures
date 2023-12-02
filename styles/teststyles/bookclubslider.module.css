@@ -60,3 +60,37 @@
   color: black;
   padding: 2px 5px;
 }
+@media screen and (max-width: 1200px){
+  .slider{
+    width: 70%;
+    margin: 20px 15% 20px 20%;
+    padding-left:5%;
+  }
+  .inner{
+    width: 80%;
+  }
+  .imgcont{
+    width: 100%;
+  }
+  .img{
+    width: 100%;
+    height: auto;
+  }
+  .name{
+    font-size: 28px;
+    text-align: center;
+  }
+  .info{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px){
+  .slider{
+    width: 100%;
+    margin: 20px 15% 20px 10%;
+    padding-left:5%;
+  }
+  .name{
+    font-size: 18px;
+  }
+}

@@ -1,7 +1,10 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import Topcomponent from "../components/homepage/topcomponent";
-import Herosection from "../components/homepage/herosection";
+// import Topcomponent from "../components/homepage/topcomponent";
+// import Herosection from "../components/homepage/herosection";
+import Navbar from '../components/testpage/navbar/navbar' 
+import Hero from '../components/testpage/herosection/hero'
+import Slider from '../components/testpage/herosection/Heroslider.js'
 import Reading from "../components/homepage/middlecomponents/reading";
 import Books from "../components/homepage/middlecomponents/bookssection";
 import Lower from "../components/homepage/lowercomponents/lowercomponents";
@@ -55,8 +58,12 @@ const Home = ({product,data2}) => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div>
-        <Topcomponent />
-        <Herosection />
+
+        {/* <Topcomponent />
+        <Herosection /> */}
+        <Navbar />
+        <Hero />
+        <Slider />
         <Ads />
         <Reading />
         <Books data={product} data2={data2}/>

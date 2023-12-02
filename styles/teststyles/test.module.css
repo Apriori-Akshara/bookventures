@@ -1,29 +1,41 @@
 .container{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 5%;
-  gap: 7%;
   position: fixed;
   width: 90vw;
   z-index: 100;
   transition: 0.5s;
+  border-bottom: 1px solid white;
+}
+.menu{
+  display: none;
 }
 .container ul{
   display: flex;
   justify-content: space-evenly;
   flex-grow: 1;
+  z-index: 10;
+  width: 75vw;
 }
 .container ul li, .link{
   color: white;
   text-decoration: none;
   list-style: none;
+  padding: 5px 1%;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.container ul li:hover, .link:hover{
+background-color: rgba(53, 53, 53, 0.6);
 }
 .dark{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: black;
   padding: 20px 5%;
-  gap: 7%;
   position: fixed;
   width: 90vw;
   z-index: 100;
@@ -33,11 +45,15 @@
   display: flex;
   justify-content: space-evenly;
   flex-grow: 1;
+  width: 75vw;
 }
 .dark ul li, .link{
   color: white;
   text-decoration: none;
   list-style: none;
+  padding: 5px 1%;
+  transition: 0.3s;
+  border-radius: 10px;
 }
 .logoimg{
   height: 50px;
@@ -59,4 +75,60 @@
   z-index: 1000;
   height: 140px;
   transition: 0.3s;
+}
+@media screen and (max-width: 1200px){
+  .menu{
+    display: block;
+  }
+  .container{
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+  .container ul{
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    font-size: 35px;
+    gap: 30px;
+    padding: 50px 5%;
+    width: 90%;
+  }
+  .dark ul{
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    font-size: 35px;
+    gap: 30px;
+    padding: 50px 5%;
+    width: 90%;
+  }
+  .list{
+    position: absolute;
+    left: 0px;
+    top: 60px;
+    transition: 0.3s;
+    width: 100%;
+  }
+  .left{
+    top: -1000px;
+  }
+  .right{
+    top: 60px;
+  }
+  .menu button{
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+  }
+}
+@media screen and (max-width: 768px){
+  .container ul{
+    font-size: 25px;
+    width: 90%;
+    gap: 20px;
+  }
+  .dark ul{
+    font-size: 25px;
+    width: 100%;
+    gap: 20px;
+  }
 }

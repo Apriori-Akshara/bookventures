@@ -2,11 +2,12 @@ import React from 'react'
 import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/contactus/contactus.module.css'
+import Navbar from '../../components/testpage/navbar/navbar' 
 
 const index = () => {
   return (
     <div>
-      <Topcomponent />
+      <Navbar />
         <div className={styles.container}>
           <div className={styles.title}>Contact Us</div>
           <div className={styles.subcontainer}>

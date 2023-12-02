@@ -1,6 +1,5 @@
 .container{
-  margin-top: 150px;
-  padding-top: 30px;
+  margin-top: 105px;
   background: rgb(51,51,51);
   color: white;
 }
@@ -98,7 +97,7 @@
 }
 @media screen and (max-width: 768px){
   .container{
-    margin-top: 115px;
+    margin-top: 100px;
   }
   .subcontainer{
     grid-template-columns: 1fr;

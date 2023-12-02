@@ -7,14 +7,16 @@
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
+.states{
+  color: black;
+}
 .wcontainer{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  background-color: rgba(255, 255, 255,0.85);
-  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
   padding-bottom: 20px;
   min-height: 250px;
 }
@@ -60,8 +62,6 @@
   padding: 20px;
   padding-left: 20px;
   font-size: 26px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 .label{
   margin-left: 2%;
@@ -190,7 +190,7 @@
   }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 768px){
   .wcontainer{
     width: 95%;
   }

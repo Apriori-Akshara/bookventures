@@ -1,9 +1,10 @@
 import React from 'react'
-import Topcomponent from "../../components/homepage/topcomponent";
+// import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/kids/kids.module.css'
 import dynamic from "next/dynamic";
 import Grid from '../../components/homepage/middlecomponents/Grid'
+import Navbar from '../../components/testpage/navbar/navbar' 
 
 export const getStaticProps = async () => {
   const resulting = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
@@ -26,7 +27,7 @@ const index = ({data}) => {
 
   return (
     <div>
-    <Topcomponent />
+        <Navbar />
     <div className={styles.container}>
       <div className={styles.topic}>Bookventures Kids</div>
       <h1 className={styles.title}>Fiction</h1>

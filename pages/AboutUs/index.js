@@ -3,11 +3,12 @@ import Footer from "../../components/homepage/bottomcomponent/footer";
 import React from 'react'
 import styles from "../../styles/aboutus/aboutus.module.css"
 import Image from 'next/image';
+import Navbar from '../../components/testpage/navbar/navbar' 
 
 const index = () => {
   return (
     <div>
-    <Topcomponent />
+    <Navbar />
     <div className={styles.container}>
     <div className={styles.topic}>About Us</div>
     <div className={styles.subcontainer}>

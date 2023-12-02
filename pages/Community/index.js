@@ -3,6 +3,7 @@ import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from "../../styles/homecomponents/community.module.css";
 import dynamic from "next/dynamic";
 import Grid from '../../components/homepage/middlecomponents/Grid'
+import Navbar from '../../components/testpage/navbar/navbar' 
 
 export const getStaticProps = async () => {
   const resulting = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
@@ -27,7 +28,7 @@ const index = ({data}) => {
 
   return (
     <>
-      <Topcomponent />
+      <Navbar />
       <div className={styles.container}>
         <div className={styles.topcontainer}>
           <div className={styles.topic}>Join a community</div>
