@@ -40,7 +40,7 @@ const Index = () => {
     <div>
       <Navbar />
       <div className={styles.container}>
-        <div className={styles.topic}>Search For The Books You Like</div>
+        <div className={styles.topic}>Search for the books you like</div>
         <h1 className={styles.title}>Search</h1>
         <div className={styles.searchcontainer}>
           <input
