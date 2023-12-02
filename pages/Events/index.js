@@ -3,7 +3,7 @@ import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from "../../styles/eventspage/eventspage.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "../../components/testpage/navbar/Navbar";
+import Navbar from "../../components/testpage/navbar/Newnavbar";
 
 const index = () => {
   const data = [

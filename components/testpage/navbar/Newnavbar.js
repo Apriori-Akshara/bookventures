@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {FaBars} from 'react-icons/fa'
 
-const Navbar = () => {
+const Newnavbar = () => {
 
   const [click,setClick] = useState(true);
   const [colorChange, setColorchange] = useState(true);
@@ -75,4 +75,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Newnavbar

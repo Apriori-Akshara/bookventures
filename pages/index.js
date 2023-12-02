@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 // import Topcomponent from "../components/homepage/topcomponent";
 // import Herosection from "../components/homepage/herosection";
-import Navbar from "../components/testpage/navbar/Navbar";
+import Navbar from "../components/testpage/navbar/Newnavbar";
 import Hero from "../components/testpage/herosection/hero";
 import Slider from "../components/testpage/herosection/Heroslider.js";
 import Reading from "../components/homepage/middlecomponents/reading";

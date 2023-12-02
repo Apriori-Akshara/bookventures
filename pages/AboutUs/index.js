@@ -3,7 +3,7 @@ import Footer from "../../components/homepage/bottomcomponent/footer";
 import React from "react";
 import styles from "../../styles/aboutus/aboutus.module.css";
 import Image from "next/image";
-import Navbar from "../../components/testpage/navbar/Navbar";
+import Navbar from "../../components/testpage/navbar/Newnavbar";
 
 const index = () => {
   return (

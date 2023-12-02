@@ -7,7 +7,7 @@ import Image from "next/image";
 // import {BsSearch} from 'react-icons/bs'
 import axios from "axios";
 import dynamic from "next/dynamic";
-import Navbar from "../../components/testpage/navbar/Navbar";
+import Navbar from "../../components/testpage/navbar/Newnavbar";
 
 const Index = () => {
   const [product, setProduct] = useState([]);

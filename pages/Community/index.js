@@ -3,7 +3,7 @@ import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from "../../styles/homecomponents/community.module.css";
 import dynamic from "next/dynamic";
 import Grid from "../../components/homepage/middlecomponents/Grid";
-import Navbar from "../../components/testpage/navbar/Navbar";
+import Navbar from "../../components/testpage/navbar/Newnavbar";
 
 export const getStaticProps = async () => {
   const resulting = await fetch(

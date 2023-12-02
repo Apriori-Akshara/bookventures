@@ -2,7 +2,7 @@ import React from "react";
 import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from "../../styles/contactus/contactus.module.css";
-import Navbar from "../../components/testpage/navbar/Navbar";
+import Navbar from "../../components/testpage/navbar/Newnavbar";
 
 const index = () => {
   return (

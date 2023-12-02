@@ -2,7 +2,7 @@ import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from "../../styles/bookclubs/bookclubs.module.css";
 import Image from "next/image";
-import Navbar from "../../components/testpage/navbar/Navbar";
+import Navbar from "../../components/testpage/navbar/Newnavbar";
 
 const index = () => {
   const info = [
