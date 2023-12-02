@@ -125,10 +125,12 @@ background-color: rgba(53, 53, 53, 0.6);
     font-size: 25px;
     width: 90%;
     gap: 20px;
+    padding: 30px 5%;
   }
   .dark ul{
     font-size: 25px;
     width: 100%;
     gap: 20px;
+    padding: 30px 5%;
   }
 }
