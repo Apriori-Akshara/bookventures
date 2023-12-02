@@ -2,15 +2,18 @@ import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from "../../styles/homecomponents/community.module.css";
 import dynamic from "next/dynamic";
-import Grid from '../../components/homepage/middlecomponents/Grid'
-import Navbar from '../../components/testpage/navbar/navbar' 
+import Grid from "../../components/homepage/middlecomponents/Grid";
+import Navbar from "../../components/testpage/navbar/Navbar";
 
 export const getStaticProps = async () => {
-  const resulting = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
-    headers: {
-     Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
-   } 
-   });
+  const resulting = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/authors?populate=*`,
+    {
+      headers: {
+        Authorization: "bearer " + process.env.NEXT_PUBLIC_TOKEN,
+      },
+    }
+  );
   const result = await resulting.json();
   return {
     props: {
@@ -19,12 +22,19 @@ export const getStaticProps = async () => {
   };
 };
 
-const index = ({data}) => {
-
-  
- let fiction = data.filter(data => data.attributes.isfiction === true && data.attributes.iskids === false);
- let nonfiction = data.filter(data => data.attributes.isfiction === false && data.attributes.iskids === false);
- let kidsfiction = data.filter(data => data.attributes.isfiction === true && data.attributes.iskids === true);
+const index = ({ data }) => {
+  let fiction = data.filter(
+    (data) =>
+      data.attributes.isfiction === true && data.attributes.iskids === false
+  );
+  let nonfiction = data.filter(
+    (data) =>
+      data.attributes.isfiction === false && data.attributes.iskids === false
+  );
+  let kidsfiction = data.filter(
+    (data) =>
+      data.attributes.isfiction === true && data.attributes.iskids === true
+  );
 
   return (
     <>
@@ -38,22 +48,19 @@ const index = ({data}) => {
           <h1 className={styles.title}>Fiction</h1>
 
           <div>
-          <Grid data={fiction}/>
+            <Grid data={fiction} />
           </div>
-
-          
 
           <h1 className={styles.title}>Non-Fiction</h1>
 
           <div>
-          <Grid data={nonfiction}/>
+            <Grid data={nonfiction} />
           </div>
-
 
           <h1 className={styles.title}>Bookventures kids</h1>
 
           <div>
-          <Grid data={kidsfiction}/>
+            <Grid data={kidsfiction} />
           </div>
 
           {/* <div className={styles.bvcontainer}>
@@ -78,6 +85,4 @@ const index = ({data}) => {
   );
 };
 
-export default dynamic (() => Promise.resolve(index), {ssr: false})
-
-
+export default dynamic(() => Promise.resolve(index), { ssr: false });

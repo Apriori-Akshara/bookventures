@@ -2,49 +2,50 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 // import Topcomponent from "../components/homepage/topcomponent";
 // import Herosection from "../components/homepage/herosection";
-import Navbar from '../components/testpage/navbar/navbar' 
-import Hero from '../components/testpage/herosection/hero'
-import Slider from '../components/testpage/herosection/Heroslider.js'
+import Navbar from "../components/testpage/navbar/Navbar";
+import Hero from "../components/testpage/herosection/hero";
+import Slider from "../components/testpage/herosection/Heroslider.js";
 import Reading from "../components/homepage/middlecomponents/reading";
 import Books from "../components/homepage/middlecomponents/bookssection";
 import Lower from "../components/homepage/lowercomponents/lowercomponents";
 import Footer from "../components/homepage/bottomcomponent/footer";
-import Ads from '../components/homepage/ad/ads'
+import Ads from "../components/homepage/ad/ads";
 import dynamic from "next/dynamic";
-import Kids from '../components/homepage/middlecomponents/kidssection'
+import Kids from "../components/homepage/middlecomponents/kidssection";
 import Modal from "@/components/Modal/Modal";
 import { useEffect, useState } from "react";
-import MyComponent from '../components/Modal/Mycomponent'
+import MyComponent from "../components/Modal/Mycomponent";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const getStaticProps = async () => {
-  const [resulting,res2] = await Promise.all([ fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
-    headers: {
-     Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
-   } 
-   }),
-   fetch(`${process.env.NEXT_PUBLIC_URL}/awards?populate=*`, {
-    headers: {
-     Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
-   } 
-   }),]);
-  const [result,data2] = await Promise.all([resulting.json(),res2.json()])
+  const [resulting, res2] = await Promise.all([
+    fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
+      headers: {
+        Authorization: "bearer " + process.env.NEXT_PUBLIC_TOKEN,
+      },
+    }),
+    fetch(`${process.env.NEXT_PUBLIC_URL}/awards?populate=*`, {
+      headers: {
+        Authorization: "bearer " + process.env.NEXT_PUBLIC_TOKEN,
+      },
+    }),
+  ]);
+  const [result, data2] = await Promise.all([resulting.json(), res2.json()]);
   return {
     props: {
       product: result.data,
-      data2:data2.data,
+      data2: data2.data,
     },
   };
 };
 
-const Home = ({product,data2}) => {
-
-  const [isOpen,setIsOpen] = useState(false)
+const Home = ({ product, data2 }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsOpen(true)
+      setIsOpen(true);
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
@@ -58,7 +59,6 @@ const Home = ({product,data2}) => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div>
-
         {/* <Topcomponent />
         <Herosection /> */}
         <Navbar />
@@ -66,19 +66,17 @@ const Home = ({product,data2}) => {
         <Slider />
         <Ads />
         <Reading />
-        <Books data={product} data2={data2}/>
+        <Books data={product} data2={data2} />
         <Ads />
-        <Kids data={product}/>
+        <Kids data={product} />
         <Lower />
         <Footer />
       </div>
       <Modal open={isOpen}>
-        <MyComponent onClose={() => setIsOpen(false)}/>
+        <MyComponent onClose={() => setIsOpen(false)} />
       </Modal>
     </>
   );
-}
+};
 
-export default dynamic (() => Promise.resolve(Home), {ssr: false})
-
-
+export default dynamic(() => Promise.resolve(Home), { ssr: false });

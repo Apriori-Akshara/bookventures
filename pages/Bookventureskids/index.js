@@ -1,17 +1,20 @@
-import React from 'react'
+import React from "react";
 // import Topcomponent from "../../components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
-import styles from '../../styles/kids/kids.module.css'
+import styles from "../../styles/kids/kids.module.css";
 import dynamic from "next/dynamic";
-import Grid from '../../components/homepage/middlecomponents/Grid'
-import Navbar from '../../components/testpage/navbar/navbar' 
+import Grid from "../../components/homepage/middlecomponents/Grid";
+import Navbar from "../../components/testpage/navbar/Navbar";
 
 export const getStaticProps = async () => {
-  const resulting = await fetch(`${process.env.NEXT_PUBLIC_URL}/authors?populate=*`, {
-    headers: {
-     Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
-   } 
-   });
+  const resulting = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/authors?populate=*`,
+    {
+      headers: {
+        Authorization: "bearer " + process.env.NEXT_PUBLIC_TOKEN,
+      },
+    }
+  );
   const result = await resulting.json();
   return {
     props: {
@@ -20,23 +23,28 @@ export const getStaticProps = async () => {
   };
 };
 
-const index = ({data}) => {
-
-  let fiction = data.filter(data => data.attributes.isfiction === true && data.attributes.iskids === true);
-  let nonfiction = data.filter(data => data.attributes.isfiction === false && data.attributes.iskids === true);
+const index = ({ data }) => {
+  let fiction = data.filter(
+    (data) =>
+      data.attributes.isfiction === true && data.attributes.iskids === true
+  );
+  let nonfiction = data.filter(
+    (data) =>
+      data.attributes.isfiction === false && data.attributes.iskids === true
+  );
 
   return (
     <div>
-        <Navbar />
-    <div className={styles.container}>
-      <div className={styles.topic}>Bookventures Kids</div>
-      <h1 className={styles.title}>Fiction</h1>
+      <Navbar />
+      <div className={styles.container}>
+        <div className={styles.topic}>Bookventures Kids</div>
+        <h1 className={styles.title}>Fiction</h1>
 
-      <div>
-        <Grid data={fiction}/>
-      </div>
+        <div>
+          <Grid data={fiction} />
+        </div>
 
-      {/* <div className={styles.bvcontainer}>
+        {/* <div className={styles.bvcontainer}>
             {fiction.map((data) => (
               
               <div className={styles.bvcard} key={data.id}>
@@ -54,7 +62,7 @@ const index = ({data}) => {
             ))}
           </div> */}
 
-          {/* <h1 className={styles.title}>Non-Fiction</h1>
+        {/* <h1 className={styles.title}>Non-Fiction</h1>
 
           <div className={styles.bvcontainer}>
             {nonfiction.map((data) => (
@@ -71,11 +79,10 @@ const index = ({data}) => {
               </div>
             ))}
           </div> */}
+      </div>
+      <Footer />
     </div>
-    <Footer />
-    </div>
-  )
-}
+  );
+};
 
-export default dynamic (() => Promise.resolve(index), {ssr: false})
-
+export default dynamic(() => Promise.resolve(index), { ssr: false });
