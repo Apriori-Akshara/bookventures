@@ -1,4 +1,4 @@
-import Topcomponent from "@/components/homepage/topcomponent";
+// import Topcomponent from "@/components/homepage/topcomponent";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import React from "react";
 import styles from "../../styles/aboutus/aboutus.module.css";
