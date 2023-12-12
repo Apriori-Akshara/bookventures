@@ -17,9 +17,10 @@ import ProfileComponent from '../../components/Porfilemodal/ProfileComponent'
 import { falsch } from '../../store/slices/ProfileSlice/ProfileSlice'
 
 export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books?pagination[page]=1&pagination[pageSize]=500`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books?pagination[page]=1&pagination[pageSize]=500`, { next: { revalidate: 1 } } , {
     headers: {
      Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
    } 
