@@ -53,7 +53,7 @@ export const getStaticProps = async (context) => {
   };
 };
 
-const Book = ({product}) => {
+const Book = ({product,id}) => {
 
   const router = useRouter()
   const dispatch = useDispatch();
@@ -150,7 +150,7 @@ const Book = ({product}) => {
           </form>
         </div>
         <div className={styles.reviewcommentsec}>
-          <div>{product.userreviews.data.map(data => <div>
+          <div>{product.userreviews.data.map(data => <div key={data.attributes.id}>
             {data.attributes.name && <div className={styles.name}><span className={styles.spanname}>{data.attributes.name}</span> wrote this:</div>}
             <div className={styles.lowercomment}>
             <div className={styles.stars}>
