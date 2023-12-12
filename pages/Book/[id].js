@@ -16,6 +16,8 @@ import ProfileModal from '../../components/Porfilemodal/ProfileModal'
 import ProfileComponent from '../../components/Porfilemodal/ProfileComponent'
 import { falsch } from '../../store/slices/ProfileSlice/ProfileSlice'
 
+export const revalidate = 1;
+
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books?pagination[page]=1&pagination[pageSize]=500`, {
     headers: {
