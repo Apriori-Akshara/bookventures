@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { Signinsuccess } from "../../store/slices/User/UserSlice.js";
 import { falcey } from "../../store/slices/loginSlice/loginmodalSlice";
 
-export default function signin() {
+export default function Signin() {
   const dispatch = useDispatch();
   const[data,setData] = useState({
     identifier: '',

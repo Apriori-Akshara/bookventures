@@ -52,7 +52,7 @@ export const getStaticProps = async (context) => {
   };
 };
 
-const books = ({product}) => {
+const Books = ({product}) => {
 
   const dispatch = useDispatch();
   const modal = useSelector(state => state.modal);
@@ -94,4 +94,4 @@ const books = ({product}) => {
   )
 }
 
-export default dynamic (() => Promise.resolve(books), {ssr: false})
+export default dynamic (() => Promise.resolve(Books), {ssr: false})
