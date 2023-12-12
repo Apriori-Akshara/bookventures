@@ -1,5 +1,5 @@
 .container{
-  margin-top: 105px;
+  margin-top: 85px;
   background: rgb(51,51,51);
   background: linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(8,8,10,1) 54%, rgba(48,46,46,1) 100%, rgba(2,0,36,1) 100%, rgba(49,90,98,1) 100%);
 }
@@ -75,7 +75,7 @@
 }
 @media screen and (max-width: 1200px){
   .container{
-    margin-top: 100px;
+    margin-top: 60px;
   }
   .cards{
     grid-template-columns: 1fr 1fr 1fr;
@@ -96,7 +96,7 @@
 }
 @media screen and (max-width: 768px){
   .container{
-    margin-top: 100px;
+    margin-top: 60px;
   }
   .cards{
     grid-template-columns: 1fr;

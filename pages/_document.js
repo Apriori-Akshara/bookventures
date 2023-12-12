@@ -7,6 +7,7 @@ export default function Document() {
       <body>
         <Main />
         <div id='myportal' />
+        <div id='loginportal' />
         <NextScript />
       </body>
     </Html>

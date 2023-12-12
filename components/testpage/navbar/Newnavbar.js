@@ -3,13 +3,20 @@ import styles from '../../../styles/teststyles/test.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import {FaBars} from 'react-icons/fa'
+import { FaUserCircle } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { truethy } from "../../../store/slices/modalSlice";
+import { truecy } from "../../../store/slices/loginSlice/loginmodalSlice";
+import { tiru } from '../../../store/slices/ProfileSlice/ProfileSlice'
 
 const Newnavbar = () => {
 
+  const dispatch = useDispatch();
   const [click,setClick] = useState(true);
   const [colorChange, setColorchange] = useState(true);
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const user = useSelector(state => state.user);
 
     const controlNavbar = () => {
     if (typeof window !== 'undefined') { 
@@ -68,7 +75,13 @@ const Newnavbar = () => {
         <Link className={styles.link} href='/AboutUs'>About Us</Link>
       </ul>   
       </div>
-      <div className={styles.menu}><button onClick={clicked}><FaBars /></button></div>
+      <div className={styles.end}>
+        <button className={styles.members} onClick={() => dispatch(truethy())}>Members</button>
+        <div className={styles.endflex}>
+          {user.user.img ? <Image className={styles.usericon} src={user.user.img} onClick={() => dispatch(tiru())} width={40} height={40} alt='image' /> : <FaUserCircle onClick={() => dispatch(truecy())} className={styles.usericon}/>}
+        </div>
+        <div className={styles.menu}><button onClick={clicked}><FaBars /></button></div>
+      </div>      
     </div>
 
     </div>

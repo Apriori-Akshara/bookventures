@@ -6,7 +6,7 @@
   box-sizing: border-box;
   padding: 20px 0 30px;
   background-color: black;
-  margin-top: 105px;
+  margin-top: 85px;
 }
 .topcontainer{
   text-align: center;
@@ -223,7 +223,7 @@ cursor: pointer;
 }
 @media screen and (max-width: 1200px){
   .container{
-    margin-top: 100px;
+    margin-top: 60px;
   }
   .bvcontainer{
     grid-template-columns: 1fr 1fr;
@@ -237,7 +237,7 @@ cursor: pointer;
 }
 @media screen and (max-width: 768px){
   .container{
-    margin-top: 100px;
+    margin-top: 60px;
   }
   .bvcontainer{
     grid-template-columns: 1fr;

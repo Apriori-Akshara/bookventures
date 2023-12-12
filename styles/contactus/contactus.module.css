@@ -1,5 +1,5 @@
 .container{
-  margin-top: 105px;
+  margin-top: 85px;
 }
 .title{
   padding: 20px 0;
@@ -92,7 +92,7 @@
 }
 @media screen and (max-width: 1200px){
   .container{
-    margin-top: 100px;
+    margin-top: 60px;
   }
   .infos{
     flex-direction: column;
@@ -116,7 +116,7 @@
 }
 @media screen and (max-width: 768px){
   .container{
-    margin-top: 100px;
+    margin-top: 60px;
   }
   .frame{
     height: 300px;

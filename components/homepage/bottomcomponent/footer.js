@@ -11,11 +11,11 @@ import {BsYoutube} from 'react-icons/bs'
 const footer = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.logo}><b>Subscribe to Our Newsletter</b></div>
+      <div className={styles.logo}><b>Subscribe to our newsletter</b></div>
       <div className={styles.row}>
       <div className={`${styles.column} ${styles.columnend}`}>
           {/* <p><b>Subscribe to Our Newsletter</b></p> */}
-          <p className={styles.text}><b>Join the Bookclubs newsletter for monthly reading recommendations, book club tips, giveaways, and more.</b></p><br/>
+          <p className={styles.text}><b>Join the Book Clubs newsletter for monthly reading recommendations, book club tips, giveaways, and more.</b></p><br/>
           <div className={styles.input}>
             <input placeholder='Email Address'/>
             <button><BsFillArrowRightCircleFill /></button>
@@ -31,7 +31,7 @@ const footer = () => {
         </div>
         <div className={styles.column}>
           <p><b>Company</b></p>
-          <p> About Bookclubs</p>
+          <p> About Book Clubs</p>
           <p> Privacy Policy</p>
         </div>
         <div className={styles.column}>
@@ -49,7 +49,7 @@ const footer = () => {
           <p> FAQ</p>
         </div>
         <div className={styles.column}>
-          <p><b>Bookclubs for...</b></p>
+          <p><b>Book Clubs for...</b></p>
           <p> Business</p>
           <p> Charities</p>
           <p> Bookstores</p>

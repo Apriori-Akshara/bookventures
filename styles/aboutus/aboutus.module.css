@@ -1,5 +1,5 @@
 .container{
-  margin-top: 105px;
+  margin-top: 85px;
 }
 .topic{
   padding: 20px 0;
@@ -60,7 +60,7 @@ width: 7vw;
 }
 @media screen and (max-width: 1200px){
   .container{
-    margin-top: 100px;
+    margin-top: 60px;
   }
   .first{
     flex-direction: column;
@@ -77,6 +77,6 @@ width: 7vw;
 }
 @media screen and (max-width: 768px){
   .container{
-    margin-top: 100px;
+    margin-top: 60px;
   }
 }

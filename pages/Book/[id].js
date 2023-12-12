@@ -1,9 +1,21 @@
 import React, {useState} from 'react'
-import Topcomponent from "../../components/homepage/topcomponent";
+import Navbar from "../../components/testpage/navbar/Newnavbar";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/singlebook/book.module.css'
 import Image from 'next/image';
 import dynamic from "next/dynamic";
+import Modal from "../../components/Modal/Modal";
+import MyComponent from "../../components/Modal/Mycomponent";
+import LoginModal from '../../components/Loginmodal/LoginModal'
+import LoginComponent from '../../components/Loginmodal/LoginComponent'
+import { useDispatch, useSelector } from "react-redux";
+import { falsey } from "../../store/slices/modalSlice";
+import { falcey } from "../../store/slices/loginSlice/loginmodalSlice";
+import { FaRegStar } from "react-icons/fa";
+import { useRouter } from 'next/router'
+import ProfileModal from '../../components/Porfilemodal/ProfileModal'
+import ProfileComponent from '../../components/Porfilemodal/ProfileComponent'
+import { falsch } from '../../store/slices/ProfileSlice/ProfileSlice'
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books?pagination[page]=1&pagination[pageSize]=500`, {
@@ -43,15 +55,62 @@ export const getStaticProps = async (context) => {
 
 const Book = ({product}) => {
 
+  const router = useRouter()
+  const dispatch = useDispatch();
+  const modal = useSelector(state => state.modal);
+  const user = useSelector(state => state.user);
+  const profilemodal = useSelector(state => state.profile);
+  const loginmodal = useSelector(state => state.loginmodal);
   const [show, setShow] = useState(true)
+  const [starsubmit,setStarsubmit] = useState(false)
+  const [clicked, setClicked] = useState([false, false, false, false, false]);
+  const [review,setReview] = useState({
+    comment:'',
+    stars:''
+  })
+
+  console.log(product)
+
+  const handleStarClick = (e, index) => {
+    e.preventDefault();
+    let clickStates = [...clicked];
+    for (let i = 0; i < 5; i++) {
+      if (i <= index) clickStates[i] = true;
+      else clickStates[i] = false;
+    }
+    setClicked(clickStates);
+    setStarsubmit(true)
+    setReview({...review, stars:index+1})
+  };
 
   function showMore(){
     setShow(!show)
   }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await fetch(`${process.env.NEXT_PUBLIC_URL}/userreviews`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${user.user.jwt}`,
+      },
+      body: JSON.stringify({
+        data: {
+          comment: review.comment,
+          stars: review.stars,
+          book: router.query.id,
+          name: user.user.username
+        }
+    })
+  })
+  router.reload();
+}
+
   return (
-    <div>
-      <Topcomponent />
+    <>
+      <div>
+        <Navbar />
       <div className={styles.container}>
         <div className={styles.topic}>{product.name}</div>
         <hr className={styles.hr}/>
@@ -74,10 +133,54 @@ const Book = ({product}) => {
           <Image className={styles.adimg} src={"/ads/ad2.jpeg"} width={300} height={700} unoptimized={true} alt="sidead" />
         </div>
         </div>
+        <div className={styles.reviewcommentcont}>
+          <div className={styles.commenttopic}>Leave a Comment</div>
+          <form onSubmit={handleSubmit} className={styles.commentsection}>
+          <div className={styles.stars}>
+            <FaRegStar onClick={(e) => handleStarClick(e, 0)} className={clicked[0] ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`} />
+            <FaRegStar onClick={(e) => handleStarClick(e, 1)} className={clicked[1] ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+            <FaRegStar onClick={(e) => handleStarClick(e, 2)} className={clicked[2] ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+            <FaRegStar onClick={(e) => handleStarClick(e, 3)} className={clicked[3] ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+            <FaRegStar onClick={(e) => handleStarClick(e, 4)} className={clicked[4] ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+          </div>
+          <div className={styles.submitarea}>
+            <textarea rows="4" cols="50" className={styles.area} onChange={(e) => setReview({...review, comment:e.target.value})}/> 
+          <button type='submit' className={styles.starsub}>Submit</button>
+          </div>
+          </form>
+        </div>
+        <div className={styles.reviewcommentsec}>
+          <div>{product.userreviews.data.map(data => <div>
+            {data.attributes.name && <div className={styles.name}><span className={styles.spanname}>{data.attributes.name}</span> wrote this:</div>}
+            <div className={styles.lowercomment}>
+            <div className={styles.stars}>
+            <FaRegStar className={1 <= data.attributes.stars ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+            <FaRegStar className={2 <= data.attributes.stars ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+            <FaRegStar className={3 <= data.attributes.stars ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+            <FaRegStar className={4 <= data.attributes.stars ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+            <FaRegStar className={5 <= data.attributes.stars ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+            </div>
+            <div className={styles.singlecomment}>{data.attributes.comment}</div>
+            </div>
+          </div>)}
+          </div>
+        </div>
       </div>
+
       
       <Footer />
     </div>
+    <Modal open={modal.value}>
+        <MyComponent onClose={() => dispatch(falsey())} />
+      </Modal>
+      <LoginModal logopen={loginmodal.value}>
+        <LoginComponent onCloselog={() => dispatch(falcey())}/>
+      </LoginModal>
+      <ProfileModal proopen={profilemodal.value}>
+        <ProfileComponent onClosepro={() => dispatch(falsch())}/>
+      </ProfileModal>
+    </>
+
   )
 }
 

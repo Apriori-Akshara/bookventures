@@ -37,7 +37,7 @@ export default function Mycomponent({ onClose }) {
         <div className={styles.form}>
         <div className={styles.heading}>
           {icon && <BiArrowBack className={styles.icon} onClick={goback}/>}
-          <div>Create Your Own BookClub!</div>
+          <div className={styles.header}>Create Your Own BookClub!</div>
         </div>
           {member && <div className={styles.flexit}>
             <button className={styles.aam} onClick={members}>Already a Member</button>

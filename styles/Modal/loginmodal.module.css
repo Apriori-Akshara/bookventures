@@ -1,0 +1,126 @@
+.container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+.imgpara{
+  margin: 0;
+  color: rgb(0, 151, 0);
+}
+.imgbutton{
+  color: white;
+  background-color: black;
+  padding: 5px 5px;
+  font-size: 12px;
+  border: 1px solid black;
+  transition: 0.3s;
+  border-radius: 15px;
+}
+.imgbutton:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+}
+.states{
+  color: black;
+}
+.wcontainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 30%;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding-bottom: 20px;
+  min-height: 250px;
+  border-radius: 20px;
+}
+.innercontainer{
+  position: relative;
+}
+.closebtn{
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 900;
+  color: black;
+}
+.closebtn:hover{
+  cursor: pointer;
+}
+.headers{
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.headers:hover{
+  cursor: pointer;
+}
+.header{
+  padding: 5px 7%;
+  border: 1px solid black;
+  font-size: 17px;
+}
+.active{
+  background-color: black;
+  color: white;
+  padding: 5px 7%;
+  border: 1px solid black;
+  font-size: 17px;
+}
+.form{
+  padding: 5%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form label{
+  font-size: 15px;
+}
+.form input{
+  padding: 5px 10px;
+  border: 1px solid rgb(152, 152, 152);
+  border-radius: 10px;
+  background-color: rgb(240, 240, 240);
+}
+.form input:focus{
+  outline: none;
+  border: 1px solid rgb(152, 152, 152);
+}
+.button{
+  margin-top: 20px;
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  font-size: 18px;
+  border: 1px solid black;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.button:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+}
+.formflex{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+@media screen and (max-width: 1200px){
+  .wcontainer{
+    min-width: 50%;
+  }
+}
+@media screen and (max-width: 1200px){
+  .wcontainer{
+    width: 80%;
+  }
+}

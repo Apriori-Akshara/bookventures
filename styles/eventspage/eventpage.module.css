@@ -1,6 +1,5 @@
 .container{
-  margin-top: 150px;
-  padding-top: 30px;
+  margin-top: 85px;
 }
 .topic{
   padding: 20px 0;
@@ -44,7 +43,7 @@ margin-left: 20%;
 }
 @media screen and (max-width: 1200px){
   .container{
-    margin-top: 100px;
+    margin-top: 60px;
   }
   .slider{
     width:90%;
@@ -63,10 +62,7 @@ margin-left: 20%;
       height: auto;
     }
 }
-@media screen and (max-width: 1200px){
-  .container{
-    margin-top: 110px;
-  }
+@media screen and (max-width: 768px){
   .slider{
     width:85%;
     padding-left: 1%;

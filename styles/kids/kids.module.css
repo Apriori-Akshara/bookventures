@@ -1,5 +1,5 @@
 .container{
-  margin-top: 105px;
+  margin-top: 85px;
   padding: 20px 0 30px;
   background-color: black;
 }
@@ -79,8 +79,8 @@ cursor: pointer;
 }
 @media screen and (max-width: 1200px){
   .container{
-    margin-top: 90px;
-    padding-top: 30px;
+    margin-top: 60px;
+    padding-top: 20px;
   }
   .bvcontainer{
     grid-template-columns: 1fr 1fr;

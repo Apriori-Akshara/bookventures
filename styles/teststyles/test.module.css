@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
+  padding: 10px 5%;
   position: fixed;
   width: 90vw;
   z-index: 100;
@@ -17,25 +17,26 @@
   justify-content: space-evenly;
   flex-grow: 1;
   z-index: 10;
-  width: 75vw;
+  width: 60vw;
 }
 .container ul li, .link{
   color: white;
   text-decoration: none;
   list-style: none;
-  padding: 5px 1%;
+  padding: 5px 0.5%;
   transition: 0.3s;
   border-radius: 10px;
+  font-size: 14px;
 }
 .container ul li:hover, .link:hover{
-background-color: rgba(53, 53, 53, 0.6);
+background-color: rgba(95, 95, 95, 0.6);
 }
 .dark{
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: black;
-  padding: 20px 5%;
+  padding: 10px 5%;
   position: fixed;
   width: 90vw;
   z-index: 100;
@@ -45,18 +46,19 @@ background-color: rgba(53, 53, 53, 0.6);
   display: flex;
   justify-content: space-evenly;
   flex-grow: 1;
-  width: 75vw;
+  width: 60vw;
 }
 .dark ul li, .link{
   color: white;
   text-decoration: none;
   list-style: none;
-  padding: 5px 1%;
+  padding: 5px 0.5%;
   transition: 0.3s;
   border-radius: 10px;
+  font-size: 14px;
 }
 .logoimg{
-  height: 50px;
+  height: 35px;
   width: auto;
 }
 .fixed{
@@ -76,9 +78,46 @@ background-color: rgba(53, 53, 53, 0.6);
   height: 140px;
   transition: 0.3s;
 }
+.end{
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.endflex{
+  display: flex;
+  align-items: center;
+}
+.members{
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  transition: 0.3s;
+  border: 1px solid rgb(101, 101, 101);
+}
+.members:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+}
+.usericon{
+  font-size: 32px;
+  border-radius: 50%;
+  color: rgb(95, 95, 95);
+}
+.usericon:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+}
 @media screen and (max-width: 1200px){
+  .members{
+    padding: 5px;
+  }
+  .logoimg{
+    height: 30px;
+  }
   .menu{
     display: block;
+
   }
   .container{
     background-color: rgba(0, 0, 0, 0.95);
@@ -90,6 +129,7 @@ background-color: rgba(53, 53, 53, 0.6);
     gap: 30px;
     padding: 50px 5%;
     width: 90%;
+    margin: 0;
   }
   .dark ul{
     background-color: rgba(0, 0, 0, 0.95);
@@ -114,10 +154,19 @@ background-color: rgba(53, 53, 53, 0.6);
   }
   .menu button{
     background-color: black;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
-    color: white;
-    border: 2px solid white;
+    color: rgb(203, 203, 203);
+    border: 1px solid rgb(203, 203, 203);
+  }
+  .end{
+    gap: 3vw;
+  }
+  .usericon{
+    color: rgb(95, 95, 95);
+  }
+  .members{
+    border: 1px solid rgb(203, 203, 203);
   }
 }
 @media screen and (max-width: 768px){
@@ -132,5 +181,8 @@ background-color: rgba(53, 53, 53, 0.6);
     width: 100%;
     gap: 20px;
     padding: 30px 5%;
+  }
+  .members{
+    font-size: 12px;
   }
 }

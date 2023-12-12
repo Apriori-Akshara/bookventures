@@ -1,6 +1,6 @@
 .container{
-  margin-top: 170px;
-  padding-top: 30px;
+  margin-top: 85px;
+  padding-top: 20px;
   background: rgb(51,51,51);
   background: linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(8,8,10,1) 54%, rgba(48,46,46,1) 100%, rgba(2,0,36,1) 100%, rgba(49,90,98,1) 100%);
 }
@@ -79,10 +79,81 @@
 .summary button:hover{
   border: 1px solid #A5AC8C;
 }
+.stars{
+  display: flex;
+  align-items: center;
+}
+.star{
+  color: rgb(202, 202, 202);
+  font-size: 32px;
+  margin: 10px 0;
+}
+.star:hover{
+color: white;
+cursor: pointer;
+}
+.clickedstar{
+  color: rgb(212, 180, 0);
+}
+.starsub{
+  padding:10px 2%;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.starsub:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+}
+.reviewcommentcont{
+  padding: 0 10vw;
+}
+.reviewcommentsec{
+  padding: 20px 10vw;
+}
+.lowercomment{
+  padding: 5px 2vw;
+}
+.name{
+  color: white;
+  font-size: 24px;
+}
+.singlecomment{
+  color: white;
+  font-size: 20px;
+}
+.spanname{
+  font-size: 25px;
+  font-weight: 600;
+}
+.commenttopic{
+  font-size: 34px;
+  color: white;
+  display: block;
+  border-bottom: 1px solid white;
+}
+.area{
+  width: 100%;
+  height: 150px;
+  padding:10px 1%;
+  border-radius: 10px;
+}
+.area:focus{
+  outline: none;
+}
+.commentsection{
+  padding: 20px 0;
+}
+.submitarea{
+  text-align: left;
+}
 @media screen and (max-width: 1200px){
+  .reviewcommentsec{
+    text-align: left;
+  }
   .container{
     text-align: center;
-    margin-top: 120px;
+    margin-top: 60px;
   }
   .heading{
     text-align: left;

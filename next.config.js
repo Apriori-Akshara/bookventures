@@ -2,8 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-      largePageDataBytes: 128 * 100000,
-    },
-}
+    largePageDataBytes: 128 * 100000,
+  },
+  images: {
+    domains: ["res.cloudinary.com"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

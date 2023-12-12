@@ -1,7 +1,5 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-// import Topcomponent from "../components/homepage/topcomponent";
-// import Herosection from "../components/homepage/herosection";
 import Navbar from "../components/testpage/navbar/Newnavbar";
 import Hero from "../components/testpage/herosection/hero";
 import Slider from "../components/testpage/herosection/Heroslider.js";
@@ -13,8 +11,16 @@ import Ads from "../components/homepage/ad/ads";
 import dynamic from "next/dynamic";
 import Kids from "../components/homepage/middlecomponents/kidssection";
 import Modal from "@/components/Modal/Modal";
-import { useEffect, useState } from "react";
+import LoginModal from '../components/Loginmodal/LoginModal'
+import LoginComponent from '../components/Loginmodal/LoginComponent'
+import { useEffect } from "react";
 import MyComponent from "../components/Modal/Mycomponent";
+import { useDispatch, useSelector } from "react-redux";
+import { truethy, falsey } from "../store/slices/modalSlice";
+import { falcey } from "../store/slices/loginSlice/loginmodalSlice";
+import ProfileModal from '../components/Porfilemodal/ProfileModal'
+import ProfileComponent from '../components/Porfilemodal/ProfileComponent'
+import { falsch } from '../store/slices/ProfileSlice/ProfileSlice'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,11 +47,14 @@ export const getStaticProps = async () => {
 };
 
 const Home = ({ product, data2 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch();
+  const modal = useSelector(state => state.modal);
+  const loginmodal = useSelector(state => state.loginmodal);
+  const profilemodal = useSelector(state => state.profile);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsOpen(true);
+      dispatch(truethy());
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
@@ -72,9 +81,15 @@ const Home = ({ product, data2 }) => {
         <Lower />
         <Footer />
       </div>
-      <Modal open={isOpen}>
-        <MyComponent onClose={() => setIsOpen(false)} />
+      <Modal open={modal.value}>
+        <MyComponent onClose={() => dispatch(falsey())} />
       </Modal>
+      <LoginModal logopen={loginmodal.value}>
+        <LoginComponent onCloselog={() => dispatch(falcey())}/>
+      </LoginModal>
+      <ProfileModal proopen={profilemodal.value}>
+        <ProfileComponent onClosepro={() => dispatch(falsch())}/>
+      </ProfileModal>
     </>
   );
 };

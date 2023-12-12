@@ -1,0 +1,45 @@
+.wcontainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 30%;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding-bottom: 20px;
+  min-height: 250px;
+  border-radius: 20px;
+}
+.innercontainer{
+  padding: 5%;
+}
+.topsection{
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.close{
+  font-size: 14px;
+  font-weight: 800;
+}
+.close:hover{
+  cursor: pointer;
+}
+.middle{
+  margin: 29px 0;
+  font-size: 20px;
+}
+.logoutbtn{
+  padding: 2%;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.logoutbtn:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+}
+@media screen and (max-width: 1200px){
+  .wcontainer{
+    min-width: 80%;
+  }
+}

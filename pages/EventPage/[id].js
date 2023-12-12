@@ -1,7 +1,17 @@
-import Topcomponent from "../../components/homepage/topcomponent";
+import Navbar from "../../components/testpage/navbar/Newnavbar";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from "../../styles/eventspage/eventpage.module.css"
 import EventsSlider from '../../components/EventsSlider/EventsSlider'
+import Modal from "../../components/Modal/Modal";
+import MyComponent from "../../components/Modal/Mycomponent";
+import LoginModal from '../../components/Loginmodal/LoginModal'
+import LoginComponent from '../../components/Loginmodal/LoginComponent'
+import { useDispatch, useSelector } from "react-redux";
+import { falsey } from "../../store/slices/modalSlice";
+import { falcey } from "../../store/slices/loginSlice/loginmodalSlice";
+import ProfileModal from '../../components/Porfilemodal/ProfileModal'
+import ProfileComponent from '../../components/Porfilemodal/ProfileComponent'
+import { falsch } from '../../store/slices/ProfileSlice/ProfileSlice'
 
 export function getServerSideProps(context) {
   return {
@@ -10,6 +20,11 @@ export function getServerSideProps(context) {
 }
 
 const EventPage = ({params}) => {
+
+  const dispatch = useDispatch();
+  const modal = useSelector(state => state.modal);
+  const loginmodal = useSelector(state => state.loginmodal);
+  const profilemodal = useSelector(state => state.profile);
   const {id} = params;
 
   const data = [
@@ -39,8 +54,9 @@ const EventPage = ({params}) => {
 
 
   return (
+    <>
     <div>
-      <Topcomponent />
+        <Navbar />
         <div className={styles.container}>
         <div className={styles.titlecontainer}><div className={styles.topic}>{event[0].title}</div></div>
         <EventsSlider event={event}/>
@@ -53,6 +69,17 @@ const EventPage = ({params}) => {
         </div>
       <Footer />
     </div>
+    <Modal open={modal.value}>
+        <MyComponent onClose={() => dispatch(falsey())} />
+      </Modal>
+      <LoginModal logopen={loginmodal.value}>
+        <LoginComponent onCloselog={() => dispatch(falcey())}/>
+      </LoginModal>
+      <ProfileModal proopen={profilemodal.value}>
+        <ProfileComponent onClosepro={() => dispatch(falsch())}/>
+      </ProfileModal>
+    </>
+
   )
 }
 
