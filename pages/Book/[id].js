@@ -16,11 +16,8 @@ import ProfileModal from '../../components/Porfilemodal/ProfileModal'
 import ProfileComponent from '../../components/Porfilemodal/ProfileComponent'
 import { falsch } from '../../store/slices/ProfileSlice/ProfileSlice'
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
-
 export const getStaticPaths = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books?pagination[page]=1&pagination[pageSize]=500`, { next: { revalidate: 1 } } , {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books?pagination[page]=1&pagination[pageSize]=500` , {
     headers: {
      Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
    } 
@@ -42,7 +39,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books/${id}?populate=*`, { next: { revalidate: 1 } } , {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books/${id}?populate=*` , {
           headers: {
            Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
          } 
@@ -52,6 +49,7 @@ export const getStaticProps = async (context) => {
     props: {
       product:data.data.attributes
     },
+    revalidate: 10,
   };
 };
 
