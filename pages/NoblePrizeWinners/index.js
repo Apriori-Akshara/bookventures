@@ -30,7 +30,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const index = ({data}) => {
+const Index = ({data}) => {
 
   const dispatch = useDispatch();
   const modal = useSelector(state => state.modal);
@@ -77,4 +77,4 @@ const index = ({data}) => {
   )
 }
 
-export default dynamic (() => Promise.resolve(index), {ssr: false})
+export default dynamic (() => Promise.resolve(Index), {ssr: false})

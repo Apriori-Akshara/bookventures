@@ -14,7 +14,7 @@ import ProfileModal from '../../components/Porfilemodal/ProfileModal'
 import ProfileComponent from '../../components/Porfilemodal/ProfileComponent'
 import { falsch } from '../../store/slices/ProfileSlice/ProfileSlice'
 
-const index = () => {
+const Index = () => {
 
   const dispatch = useDispatch();
   const modal = useSelector(state => state.modal);
@@ -106,4 +106,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
