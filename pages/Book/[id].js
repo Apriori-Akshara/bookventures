@@ -3,7 +3,6 @@ import Navbar from "../../components/testpage/navbar/Newnavbar";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/singlebook/book.module.css'
 import Image from 'next/image';
-import dynamic from "next/dynamic";
 import Modal from "../../components/Modal/Modal";
 import MyComponent from "../../components/Modal/Mycomponent";
 import LoginModal from '../../components/Loginmodal/LoginModal'
@@ -68,8 +67,6 @@ const Book = ({product}) => {
     comment:'',
     stars:''
   })
-
-  console.log(product)
 
   const handleStarClick = (e, index) => {
     e.preventDefault();
@@ -184,4 +181,4 @@ const Book = ({product}) => {
   )
 }
 
-export default dynamic (() => Promise.resolve(Book), {ssr: false})
+export default Book
