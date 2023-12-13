@@ -17,43 +17,6 @@ import ProfileModal from '../../components/Porfilemodal/ProfileModal'
 import ProfileComponent from '../../components/Porfilemodal/ProfileComponent'
 import { falsch } from '../../store/slices/ProfileSlice/ProfileSlice'
 
-// export const getStaticPaths = async () => {
-//   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books?pagination[page]=1&pagination[pageSize]=500` , {
-//     headers: {
-//      Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
-//    } 
-//    });
-//   const items = await res.json();
-//   const paths = items.data.map(item =>{
-//     return{
-//       params:{
-//         id : item.id.toString(),
-//       } 
-//     };
-//   });
-
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
-
-// export const getStaticProps = async (context) => {
-//   const id = context.params.id;
-//   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books/${id}?populate=*` , {
-//           headers: {
-//            Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
-//          } 
-//          })
-//   const data = await res.json()
-//     return {
-//     props: {
-//       product:data.data.attributes
-//     },
-//     revalidate: 1,
-//   };
-// };
-
 const Book = ({product}) => {
 
   const router = useRouter()
@@ -69,6 +32,8 @@ const Book = ({product}) => {
     comment:'',
     stars:''
   })
+
+  console.log(user.username)
 
   const handleStarClick = (e, index) => {
     e.preventDefault();
@@ -134,7 +99,7 @@ const Book = ({product}) => {
         </div>
         <div className={styles.reviewcommentcont}>
           <div className={styles.commenttopic}>Leave a Comment</div>
-          <form onSubmit={handleSubmit} className={styles.commentsection}>
+          {user.user.username ? <form onSubmit={handleSubmit} className={styles.commentsection}>
           <div className={styles.stars}>
             <FaRegStar onClick={(e) => handleStarClick(e, 0)} className={clicked[0] ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`} />
             <FaRegStar onClick={(e) => handleStarClick(e, 1)} className={clicked[1] ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
@@ -146,18 +111,18 @@ const Book = ({product}) => {
             <textarea rows="4" cols="50" className={styles.area} onChange={(e) => setReview({...review, comment:e.target.value})}/> 
           <button type='submit' className={styles.starsub}>Submit</button>
           </div>
-          </form>
+          </form> : <div className={styles.createaccounttopic}>Create an account or Singin to leave a comment</div>}
         </div>
         <div className={styles.reviewcommentsec}>
-          <div>{product.userreviews.data.map(data => <div key={data.id}>
+          <div>{product.userreviews.data.map(data => <div className={styles.commentcontainer} key={data.id}>
             {data.attributes.name && <div className={styles.name}><span className={styles.spanname}>{data.attributes.name}</span> wrote this:</div>}
             <div className={styles.lowercomment}>
             <div className={styles.stars}>
-            <FaRegStar className={1 <= data.attributes.stars ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
-            <FaRegStar className={2 <= data.attributes.stars ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
-            <FaRegStar className={3 <= data.attributes.stars ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
-            <FaRegStar className={4 <= data.attributes.stars ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
-            <FaRegStar className={5 <= data.attributes.stars ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+            <FaRegStar className={1 <= data.attributes.stars ? `${styles.sstar} ${styles.clickedstar}` : `${styles.sstar}`}/>
+            <FaRegStar className={2 <= data.attributes.stars ? `${styles.sstar} ${styles.clickedstar}` : `${styles.sstar}`}/>
+            <FaRegStar className={3 <= data.attributes.stars ? `${styles.sstar} ${styles.clickedstar}` : `${styles.sstar}`}/>
+            <FaRegStar className={4 <= data.attributes.stars ? `${styles.sstar} ${styles.clickedstar}` : `${styles.sstar}`}/>
+            <FaRegStar className={5 <= data.attributes.stars ? `${styles.sstar} ${styles.clickedstar}` : `${styles.sstar}`}/>
             </div>
             <div className={styles.singlecomment}>{data.attributes.comment}</div>
             </div>

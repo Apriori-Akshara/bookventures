@@ -88,6 +88,15 @@
   font-size: 32px;
   margin: 10px 0;
 }
+.sstar{
+  color: rgb(202, 202, 202);
+  font-size: 20px;
+  margin: 10px 0;
+}
+.sstar:hover{
+  color: white;
+  cursor: pointer;
+  }
 .star:hover{
 color: white;
 cursor: pointer;
@@ -116,15 +125,18 @@ cursor: pointer;
 }
 .name{
   color: white;
-  font-size: 24px;
+  font-size: 18px;
 }
 .singlecomment{
   color: white;
-  font-size: 20px;
+  font-size: 17px;
 }
 .spanname{
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
+}
+.commentcontainer{
+  margin-bottom: 20px;
 }
 .commenttopic{
   font-size: 34px;
@@ -147,7 +159,14 @@ cursor: pointer;
 .submitarea{
   text-align: left;
 }
+.createaccounttopic{
+  color: white;
+  font-size: 24px;
+}
 @media screen and (max-width: 1200px){
+  .reviewcommentcont{
+    text-align: left;
+  }
   .reviewcommentsec{
     text-align: left;
   }
@@ -176,6 +195,9 @@ cursor: pointer;
   }
 }
 @media screen and (max-width: 768px){
+  .createaccounttopic{
+    font-size: 18px;
+  }
   .img{
     width: 100%;
   }
