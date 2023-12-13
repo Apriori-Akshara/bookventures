@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import dynamic from "next/dynamic";
 import Navbar from "../../components/testpage/navbar/Newnavbar";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from '../../styles/singlebook/book.module.css'
@@ -182,4 +183,4 @@ const Book = ({product}) => {
   )
 }
 
-export default Book
+export default dynamic(() => Promise.resolve(Book), { ssr: false });
