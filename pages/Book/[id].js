@@ -17,42 +17,42 @@ import ProfileModal from '../../components/Porfilemodal/ProfileModal'
 import ProfileComponent from '../../components/Porfilemodal/ProfileComponent'
 import { falsch } from '../../store/slices/ProfileSlice/ProfileSlice'
 
-export const getStaticPaths = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books?pagination[page]=1&pagination[pageSize]=500` , {
-    headers: {
-     Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
-   } 
-   });
-  const items = await res.json();
-  const paths = items.data.map(item =>{
-    return{
-      params:{
-        id : item.id.toString(),
-      } 
-    };
-  });
+// export const getStaticPaths = async () => {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books?pagination[page]=1&pagination[pageSize]=500` , {
+//     headers: {
+//      Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
+//    } 
+//    });
+//   const items = await res.json();
+//   const paths = items.data.map(item =>{
+//     return{
+//       params:{
+//         id : item.id.toString(),
+//       } 
+//     };
+//   });
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = async (context) => {
-  const id = context.params.id;
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books/${id}?populate=*` , {
-          headers: {
-           Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
-         } 
-         })
-  const data = await res.json()
-    return {
-    props: {
-      product:data.data.attributes
-    },
-    revalidate: 1,
-  };
-};
+// export const getStaticProps = async (context) => {
+//   const id = context.params.id;
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books/${id}?populate=*` , {
+//           headers: {
+//            Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
+//          } 
+//          })
+//   const data = await res.json()
+//     return {
+//     props: {
+//       product:data.data.attributes
+//     },
+//     revalidate: 1,
+//   };
+// };
 
 const Book = ({product}) => {
 
@@ -184,3 +184,22 @@ const Book = ({product}) => {
 }
 
 export default dynamic(() => Promise.resolve(Book), { ssr: false });
+// export default Book;
+
+export const getServerSideProps = async (context) => {
+  // Get the id from the query params
+  const id = context.query.id;
+  // Fetch the data from the API
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/books/${id}?populate=*` , {
+          headers: {
+           Authorization: "bearer "+process.env.NEXT_PUBLIC_TOKEN,
+         } 
+         })
+  const data = await res.json()
+  // Return the props for the page component
+  return {
+    props: {
+      product:data.data.attributes
+    }
+  };
+};
