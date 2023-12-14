@@ -16,6 +16,7 @@
   font-size: 24px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .close{
   font-size: 14px;
@@ -37,6 +38,64 @@
 .logoutbtn:hover{
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+}
+.btnflex{
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+.form{
+  padding: 5%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form label{
+  font-size: 15px;
+}
+.form input{
+  padding: 5px 10px;
+  border: 1px solid rgb(152, 152, 152);
+  border-radius: 10px;
+  background-color: rgb(240, 240, 240);
+}
+.form input:focus{
+  outline: none;
+  border: 1px solid rgb(152, 152, 152);
+}
+.button{
+  margin-top: 20px;
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  font-size: 18px;
+  border: 1px solid black;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.button:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+}
+.formflex{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.labelflex{
+  display: flex;
+  align-items:baseline;
+  justify-content: space-between;
+}
+.info{
+  font-weight: 600;
+}
+.backbtn{
+  font-size: 18px;
+}
+.backbtn:hover{
+  cursor: pointer;
 }
 @media screen and (max-width: 1200px){
   .wcontainer{

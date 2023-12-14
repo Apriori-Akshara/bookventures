@@ -28,17 +28,20 @@ export default function Signin() {
       }
     );
     const profiledata = await responseData.json();
+    console.log(profiledata)
     cookie.set("username", profiledata.user.username , { expires: 1 / 24 })
     cookie.set("email", profiledata.user.email , { expires: 1 / 24 })
     cookie.set("img", profiledata.user.img , { expires: 1 / 24 })
     cookie.set("jwt", profiledata.jwt , { expires: 1 / 24 })
+    cookie.set("id", profiledata.user.id , { expires: 1 / 24 })
     dispatch(falcey())
     dispatch(Signinsuccess({username: cookie.get('username'),
     email: cookie.get('email'),
     img: cookie.get('img'),
     password: '',
     phone: '',
-    jwt:cookie.get('jwt')
+    jwt:cookie.get('jwt'),
+    id:cookie.get('id')
   }))
   }
   return (

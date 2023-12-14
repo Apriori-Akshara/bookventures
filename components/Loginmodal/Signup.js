@@ -11,7 +11,6 @@ export default function Signup() {
   const dispatch = useDispatch();
   const [image,setImage] = useState("")
     const form = useRef();
-    console.log(user.user)
 
     const sendData = async (e) => {
       e.preventDefault();
@@ -28,13 +27,15 @@ export default function Signup() {
       cookie.set("email", data.user.email , { expires: 1 / 24 })
       cookie.set("img", data.user.img , { expires: 1 / 24 })
       cookie.set("jwt", data.jwt , { expires: 1 / 24 })
+      cookie.set("id", data.user.id , { expires: 1 / 24 })
       dispatch(falcey())
       dispatch(Signinsuccess({username: cookie.get('username'),
       email: cookie.get('email'),
       img: cookie.get('img'),
       password: '',
       phone: '',
-      jwt:cookie.get('jwt')
+      jwt:cookie.get('jwt'),
+      id:cookie.get('id')
     }))
       aRef.current.value = null;
       setImage("")

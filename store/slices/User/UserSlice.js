@@ -3,6 +3,7 @@ import cookie from "js-cookie";
 
 const initialState = {
   user: {
+  id:cookie.get('id'),
   username: cookie.get('username'),
   email: cookie.get('email'),
   img: cookie.get('img'),
