@@ -10,8 +10,6 @@ export default function Become() {
     city: ""
   });
 
-  console.log(formValues)
-
   const form = useRef();
 
   const sendEmail = (e) => {
