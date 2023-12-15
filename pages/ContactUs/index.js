@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Navbar from "../../components/testpage/navbar/Newnavbar";
 import Footer from "../../components/homepage/bottomcomponent/footer";
 import styles from "../../styles/contactus/contactus.module.css";
@@ -12,6 +12,7 @@ import { falcey } from "../../store/slices/loginSlice/loginmodalSlice";
 import ProfileModal from '../../components/Porfilemodal/ProfileModal'
 import ProfileComponent from '../../components/Porfilemodal/ProfileComponent'
 import { falsch } from '../../store/slices/ProfileSlice/ProfileSlice'
+import emailjs from '@emailjs/browser';
 
 const Index = () => {
 
@@ -19,6 +20,29 @@ const Index = () => {
   const modal = useSelector(state => state.modal);
   const loginmodal = useSelector(state => state.loginmodal);
   const profilemodal = useSelector(state => state.profile);
+  const [formValues,setFormValues] = useState({
+    name:'',
+    mail:'',
+    message:''
+  })
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(formValues)
+    emailjs.sendForm('service_xk2htl5', 'template_8syzq88', form.current, 'e-BhdPOJrRoagxbyg')
+    .then(() => {
+      setFormValues({
+        name:'',
+        mail:'',
+        message:''
+      })
+      alert('Your message has been sent')
+    }, (error) => {
+        console.log(error.text);
+    });
+  }
   
   return (
     <>
@@ -76,11 +100,23 @@ const Index = () => {
             </div>
             <div className={styles.mapcontainer}>
               <div className={styles.maptitle}>Message Us</div>
-              <form className={styles.form}>
-                <input placeholder="Full Name" />
-                <input placeholder="Email Address" />
-                <textarea placeholder="Write a Message" />
-                <button className={styles.button}>Send</button>
+              <form className={styles.form} ref={form} onSubmit={(e) => sendEmail(e)}>
+                <input type='text' placeholder="Full Name" name='name' value={formValues.name} 
+                   onChange={(e) =>
+                    setFormValues({ ...formValues, name: e.target.value })
+                   }
+                   required />
+                <input type='text' placeholder="Email Address" name='mail' value={formValues.mail} 
+                  onChange={(e) =>
+                    setFormValues({ ...formValues, mail: e.target.value })
+                   }
+                   required />
+                <textarea type='text' placeholder="Write a Message" name='message' value={formValues.message} 
+                  onChange={(e) =>
+                    setFormValues({ ...formValues, message: e.target.value })
+                   }
+                   required />
+                <button type='submit' className={styles.button}>Send</button>
               </form>
             </div>
           </div>
