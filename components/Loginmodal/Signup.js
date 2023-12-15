@@ -14,7 +14,7 @@ export default function Signup() {
 
     const sendData = async (e) => {
       e.preventDefault();
-      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/auth/local/register`, {
+      try{const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/auth/local/register`, {
         headers: {
           // Authorization: "bearer " + process.env.NEXT_PUBLIC_TOKEN,
           'Content-Type': 'application/json',
@@ -39,7 +39,19 @@ export default function Signup() {
     }))
       aRef.current.value = null;
       setImage("")
-      alert('User Signed Up')
+      alert('User Signed Up')}
+      catch(error){
+        console.log(error)
+        alert('User Exists')
+        dispatch(Signinsuccess({username: cookie.get('username'),
+        email: cookie.get('email'),
+        img: cookie.get('img'),
+        password: '',
+        phone: '',
+        jwt:cookie.get('jwt'),
+        id:cookie.get('id')
+      }))
+    }
     }
     const submitImage = () => {
       const imgdata = new FormData()

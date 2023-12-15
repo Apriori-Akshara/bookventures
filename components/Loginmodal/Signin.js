@@ -46,7 +46,7 @@ export default function Signin() {
   }))
     }
     catch (error) {
-      console.error(error);
+      console.error(error.message);
       alert('Invalid Credentials')
     }
   }
