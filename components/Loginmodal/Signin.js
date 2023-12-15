@@ -14,8 +14,9 @@ export default function Signin() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    const responseData = await fetch(`${process.env.NEXT_PUBLIC_URL}/auth/local`,
+
+    try {
+      const responseData = await fetch(`${process.env.NEXT_PUBLIC_URL}/auth/local`,
       {
         method: 'POST',
         headers: {
@@ -43,6 +44,11 @@ export default function Signin() {
     jwt:cookie.get('jwt'),
     id:cookie.get('id')
   }))
+    }
+    catch (error) {
+      console.error(error);
+      alert('Invalid Credentials')
+    }
   }
   return (
     <>
