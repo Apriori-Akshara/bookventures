@@ -86,7 +86,6 @@
 .star{
   color: rgb(202, 202, 202);
   font-size: 32px;
-  margin: 10px 0;
 }
 .sstar{
   color: rgb(202, 202, 202);
@@ -149,6 +148,7 @@ cursor: pointer;
   height: 150px;
   padding:10px 1%;
   border-radius: 10px;
+  margin-top: 10px;
 }
 .area:focus{
   outline: none;
@@ -162,6 +162,45 @@ cursor: pointer;
 .createaccounttopic{
   color: white;
   font-size: 24px;
+}
+.staredit{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit{
+  color: rgb(216, 216, 216);
+  font-size: 20px;
+}
+.edit:hover{
+  color: white;
+  cursor: pointer;
+}
+.trash{
+  color: rgb(216, 216, 216);
+  font-size: 20px;
+}
+.trash:hover{
+  color: white;
+  cursor: pointer;
+}
+.edits{
+  display: flex;
+  gap: 1vw;
+}
+.starwithbtn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2vw;
+}
+.backbtn{
+  color: rgb(216, 216, 216);
+  font-size: 24px;
+}
+.backbtn:hover{
+color: white;
+cursor: pointer;
 }
 @media screen and (max-width: 1200px){
   .reviewcommentcont{
@@ -205,5 +244,9 @@ cursor: pointer;
     width: 45vw;
     display: inline-block;
     font-weight: 600;
+  }
+  .edits{
+    display: flex;
+    gap: 5vw;
   }
 }

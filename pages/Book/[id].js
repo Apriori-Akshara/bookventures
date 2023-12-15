@@ -16,6 +16,9 @@ import { useRouter } from 'next/router'
 import ProfileModal from '../../components/Porfilemodal/ProfileModal'
 import ProfileComponent from '../../components/Porfilemodal/ProfileComponent'
 import { falsch } from '../../store/slices/ProfileSlice/ProfileSlice'
+import { FiEdit2 } from "react-icons/fi";
+import { FaTrash } from "react-icons/fa";
+import { BiArrowBack } from "react-icons/bi";
 
 const Book = ({product}) => {
 
@@ -28,12 +31,17 @@ const Book = ({product}) => {
   const [show, setShow] = useState(true)
   const [starsubmit,setStarsubmit] = useState(false)
   const [clicked, setClicked] = useState([false, false, false, false, false]);
+  const [uclicked, setuClicked] = useState([false, false, false, false, false]);
+  const [editable,setEditable] = useState(true);
+  const [reviewid, setReviewid] = useState()
   const [review,setReview] = useState({
     comment:'',
     stars:''
   })
-
-  console.log(user.username)
+  const [ureview,setuReview] = useState({
+    comment:'',
+    stars:''
+  })
 
   const handleStarClick = (e, index) => {
     e.preventDefault();
@@ -45,6 +53,18 @@ const Book = ({product}) => {
     setClicked(clickStates);
     setStarsubmit(true)
     setReview({...review, stars:index+1})
+  };
+
+  const handleuStarClick = (e, index) => {
+    e.preventDefault();
+    let clickStates = [...clicked];
+    for (let i = 0; i < 5; i++) {
+      if (i <= index) clickStates[i] = true;
+      else clickStates[i] = false;
+    }
+    setuClicked(clickStates);
+    setStarsubmit(true)
+    setuReview({...ureview, stars:index+1})
   };
 
   function showMore(){
@@ -71,6 +91,36 @@ const Book = ({product}) => {
   router.reload();
 }
 
+const handleupdate = async (id) => {
+  await fetch(`${process.env.NEXT_PUBLIC_URL}/userreviews/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${user.user.jwt}`,
+    },
+    body: JSON.stringify({
+      data: {
+        comment: ureview.comment,
+        stars: ureview.stars
+      }
+  })
+})
+}
+
+const deletereview = async (id) => {
+  await fetch(`${process.env.NEXT_PUBLIC_URL}/userreviews/${id}`, {
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ${user.user.jwt}`
+    }
+})
+router.reload();
+}
+
+function editclick(id){
+  setEditable(!editable)
+  setReviewid(id)
+}
   return (
     <>
       <div>
@@ -117,6 +167,7 @@ const Book = ({product}) => {
           <div>{product.userreviews.data.map(data => <div className={styles.commentcontainer} key={data.id}>
             {data.attributes.name && <div className={styles.name}><span className={styles.spanname}>{data.attributes.name}</span> wrote this:</div>}
             <div className={styles.lowercomment}>
+            <div className={styles.staredit}>
             <div className={styles.stars}>
             <FaRegStar className={1 <= data.attributes.stars ? `${styles.sstar} ${styles.clickedstar}` : `${styles.sstar}`}/>
             <FaRegStar className={2 <= data.attributes.stars ? `${styles.sstar} ${styles.clickedstar}` : `${styles.sstar}`}/>
@@ -124,7 +175,29 @@ const Book = ({product}) => {
             <FaRegStar className={4 <= data.attributes.stars ? `${styles.sstar} ${styles.clickedstar}` : `${styles.sstar}`}/>
             <FaRegStar className={5 <= data.attributes.stars ? `${styles.sstar} ${styles.clickedstar}` : `${styles.sstar}`}/>
             </div>
+            {data.attributes.name === user.user.username && <div className={styles.edits}>
+                <FiEdit2 onClick={() => editclick(data.id)} className={styles.edit}/>
+                <FaTrash onClick={() => deletereview(data.id)} className={styles.trash}/>
+              </div>}
+            </div>
             <div className={styles.singlecomment}>{data.attributes.comment}</div>
+            {!editable && reviewid===data.id && <form onSubmit={() => handleupdate(data.id)} className={styles.commentsection}>
+            <div className={styles.starwithbtn}>
+              <div><BiArrowBack onClick={() => editclick(data.id)} className={styles.backbtn}/></div>
+              <div className={styles.stars}>
+                <FaRegStar onClick={(e) => handleuStarClick(e, 0)} className={uclicked[0] ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`} />
+                <FaRegStar onClick={(e) => handleuStarClick(e, 1)} className={uclicked[1] ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+                <FaRegStar onClick={(e) => handleuStarClick(e, 2)} className={uclicked[2] ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+                <FaRegStar onClick={(e) => handleuStarClick(e, 3)} className={uclicked[3] ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+                <FaRegStar onClick={(e) => handleuStarClick(e, 4)} className={uclicked[4] ? `${styles.star} ${styles.clickedstar}` : `${styles.star}`}/>
+              </div>
+            </div>
+ 
+              <div className={styles.submitarea}>
+                <textarea rows="4" cols="50" className={styles.area} onChange={(e) => setuReview({...ureview, comment:e.target.value})}/> 
+              <button type='submit' className={styles.starsub}>Submit</button>
+              </div>
+            </form>}
             </div>
           </div>)}
           </div>
