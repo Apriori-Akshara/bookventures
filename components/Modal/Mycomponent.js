@@ -49,8 +49,8 @@ export default function Mycomponent({ onClose }) {
             <div className={styles.red}>
               LIMITED TIME OFFER!
             </div>
-            <div className={styles.flexoffers}><div className={styles.offers}>Monthly Membership Offer - </div><s className={styles.red2}>750</s> 600 INR</div>
-            <div className={styles.flexoffers}><div className={styles.offers}>Quaterly Membership Offer - </div><s className={styles.red2}>1900</s> 1500 INR</div>
+            <div className={styles.flexoffers}><div className={styles.offers}>Monthly Membership Offer - </div><s className={styles.red2}>900</s> 800 INR</div>
+            <div className={styles.flexoffers}><div className={styles.offers}>Quaterly Membership Offer - </div><s className={styles.red2}>2400</s> 1800 INR</div>
             <div className={styles.flexoffers}><div className={styles.offers}>UPI Number for Payments - </div>9717189650</div>
           </div>
         </div>
