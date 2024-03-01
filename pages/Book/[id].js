@@ -65,7 +65,7 @@ const Book = ({ product }) => {
     setStarsubmit(true);
     setuReview({ ...ureview, stars: index + 1 });
   };
-
+  console.log(router.query.id)
   function showMore() {
     setShow(!show);
   }
