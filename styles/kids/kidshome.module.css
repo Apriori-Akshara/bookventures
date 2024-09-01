@@ -16,6 +16,7 @@
   padding: 20px 12vw;
   background-color: var(--yellow);
   font-size: 30px;
+  text-align: center;
 }
 .bvcontainer{
   display: grid;
