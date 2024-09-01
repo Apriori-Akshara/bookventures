@@ -82,7 +82,7 @@ const Index = () => {
           </div>
         </div>
 
-        <div className={styles.subcontainer}>
+        <div className={styles.subcontainer2}>
           <div className={styles.flex}>
             <div className={styles.mapcontainer}>
               <div className={styles.maptitle}>Location Map</div>

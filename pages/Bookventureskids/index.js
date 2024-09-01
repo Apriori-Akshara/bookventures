@@ -53,7 +53,9 @@ const Index = ({ data }) => {
       <Navbar />
       <div className={styles.container}>
         <div className={styles.topic}>Bookventures Kids</div>
+        <div className={styles.headcont}>
         <h1 className={styles.title}>Fiction</h1>
+        </div>
 
         <div>
           <Grid data={fiction} />

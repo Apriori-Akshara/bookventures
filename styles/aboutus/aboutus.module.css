@@ -4,12 +4,12 @@
 .topic{
   padding: 20px 0;
   text-align: center;
-  color: white;
+  color: black;
   font-weight: 700;
   word-spacing: 1px;
   font-size: 30px;
   /* background: linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(8,8,10,1) 54%, rgba(48,46,46,1) 100%, rgba(2,0,36,1) 100%, rgba(49,90,98,1) 100%); */
-  background: black;
+  background: var(--yellow);
 }
 .container hr{
 width: 7vw;

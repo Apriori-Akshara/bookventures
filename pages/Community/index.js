@@ -61,19 +61,26 @@ const Index = ({ data }) => {
         </div>
 
         <div className={styles.bvsection}>
-          <h1 className={styles.title}>Fiction</h1>
+        <div className={styles.headcont}>
+        <h1 className={styles.title}>Fiction</h1>
+        </div>
+          
 
           <div>
             <Grid data={fiction} />
           </div>
 
-          <h1 className={styles.title}>Non-Fiction</h1>
+          <div className={styles.headcont}>
+        <h1 className={styles.title}>Non-Fiction</h1>
+        </div>
 
           <div>
             <Grid data={nonfiction} />
           </div>
 
-          <h1 className={styles.title}>Bookventures kids</h1>
+          <div className={styles.headcont}>
+        <h1 className={styles.title}>Bookventures kids</h1>
+        </div>
 
           <div>
             <Grid data={kidsfiction} />

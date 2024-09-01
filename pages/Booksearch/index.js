@@ -54,8 +54,8 @@ const Index = () => {
     <div>
       <Navbar />
       <div className={styles.container}>
-        <div className={styles.topic}>Search for the books you like</div>
-        <h1 className={styles.title}>Search</h1>
+        <div className={styles.topic}>Book Search</div>
+        <h1 className={styles.title}>Search for the books you like</h1>
         <div className={styles.searchcontainer}>
           <input
             placeholder="search by writing the name"

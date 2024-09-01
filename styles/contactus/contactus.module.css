@@ -4,30 +4,36 @@
 .title{
   padding: 20px 0;
   text-align: center;
-  color: white;
+  color: black;
   font-weight: 700;
   word-spacing: 1px;
   font-size: 30px;
   /* background: linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(8,8,10,1) 54%, rgba(48,46,46,1) 100%, rgba(2,0,36,1) 100%, rgba(49,90,98,1) 100%); */
-  background: black;
+  background: var(--yellow);
 }
 .hr{
   width: 10vw;
 }
 .subcontainer{
   margin: 30px 5vw;
-  padding: 30px 5vw 60px;
-  background-color: white;
   border-radius: 20px;
   background-color: rgb(28, 28, 28);
   color: white;
 }
+.subcontainer2{
+  margin: 30px 8vw;
+  border-radius: 20px;
+  color: white;
+}
 .topic{
   font-size: 32px;
-  border-bottom: 1px solid white;
+  color: black;
+  background-color: var(--yellow);
+  padding: 10px 5vw;
 }
 .infos{
   display: flex;
+  padding: 30px 5vw 60px;
   justify-content: space-between;
 }
 .info{
@@ -48,8 +54,10 @@
 }
 .maptitle{
   font-size: 28px;
-  border-bottom: 1px solid white;
   margin-bottom: 30px;
+  background-color: var(--yellow);
+  color: black;
+  padding: 10px 1vw;
 }
 .frame{
   width: 35vw;
